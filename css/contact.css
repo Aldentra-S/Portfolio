@@ -1,0 +1,309 @@
+/* ===========================
+   CONTACT PAGE
+=========================== */
+.contact-main {
+  padding: 80px 5%;
+  max-width: 1200px;
+  margin: auto;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 50px;
+}
+
+/* Contact Cards */
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+}
+.contact-info .contact-card {
+  transition-delay: 0.1s;
+}
+.contact-info .contact-card + .contact-card {
+  margin-top: 20px; /* Replaces inline margin-top */
+}
+.contact-card-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* Contact Items */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  transition: var(--transition);
+}
+.contact-item:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  background: rgba(59, 130, 246, 0.06);
+}
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.contact-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.contact-value {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.contact-value a {
+  transition: var(--transition);
+}
+.contact-value a:hover {
+  color: var(--accent-blue);
+}
+
+/* Socials Grid */
+.socials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.social-card:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+}
+.social-card .social-icon {
+  font-size: 1.3rem;
+}
+
+/* Instagram custom gradient background (replaces inline styles) */
+.social-icon.instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.social-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.social-handle {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Availability Badge (Replaces inline styles) */
+.availability-badge {
+  transition-delay: 0.2s;
+  margin-top: 20px;
+}
+.availability-badge-inner {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.badge-pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+  flex-shrink: 0;
+  animation: pulse 2s infinite;
+  display: block;
+}
+.availability-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #4ade80;
+}
+.availability-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Contact Form Wrap */
+.contact-form-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+}
+.form-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.form-sub {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-group {
+  margin-bottom: 18px;
+}
+.form-label {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: var(--radius-md);
+  background: var(--bg-glass);
+  border: 1.5px solid var(--border-glass);
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: var(--transition);
+  outline: none;
+  resize: none;
+}
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-muted);
+}
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+  background: rgba(59, 130, 246, 0.04);
+}
+.form-input.error,
+.form-textarea.error,
+.form-select.error {
+  border-color: #f87171;
+}
+.form-error {
+  font-size: 0.72rem;
+  color: #f87171;
+  margin-top: 5px;
+  display: none;
+}
+.form-error.show {
+  display: block;
+}
+.form-textarea {
+  height: 130px;
+}
+.form-select {
+  appearance: none;
+  cursor: pointer;
+}
+.form-select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Submit Button Override */
+#contact-form button[type="submit"] {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+/* Success Message */
+.form-success {
+  display: none;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+  font-size: 0.88rem;
+  font-weight: 600;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+.form-success.show {
+  display: flex;
+}
+
+/* ===========================
+   RESPONSIVE CONTACT
+=========================== */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.5);
+  }
+}
+
+

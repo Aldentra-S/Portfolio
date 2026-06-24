@@ -1,0 +1,206 @@
+/* ===========================
+   SKILLS PAGE
+=========================== */
+.skills-main {
+  padding: 80px 5%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Tabs */
+.skills-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.skills-tab {
+  padding: 10px 22px;
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.skills-tab.active {
+  background: var(--gradient-primary);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+}
+
+.skills-tab-panel {
+  display: none;
+}
+.skills-tab-panel.active {
+  display: block;
+}
+
+/* Skills Grid & Card */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.skill-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+.skill-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  background: var(--gradient-card);
+  opacity: 0;
+  transition: var(--transition);
+}
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 24px rgba(59, 130, 246, 0.15);
+}
+.skill-card:hover::before {
+  opacity: 1;
+}
+.skill-card-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Skill card delays via nth-child (eliminates inline styles) */
+.skills-grid .skill-card:nth-child(1) { transition-delay: 0s; }
+.skills-grid .skill-card:nth-child(2) { transition-delay: 0.07s; }
+.skills-grid .skill-card:nth-child(3) { transition-delay: 0.14s; }
+.skills-grid .skill-card:nth-child(4) { transition-delay: 0.21s; }
+.skills-grid .skill-card:nth-child(5) { transition-delay: 0.28s; }
+.skills-grid .skill-card:nth-child(6) { transition-delay: 0.35s; }
+.skills-grid .skill-card:nth-child(7) { transition-delay: 0.42s; }
+.skills-grid .skill-card:nth-child(8) { transition-delay: 0.49s; }
+.skills-grid .skill-card:hover {
+  transition-delay: 0s;
+}
+
+/* Skill Logo Container */
+.skill-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 2.2rem;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  transition: var(--transition);
+}
+.skill-card:hover .skill-logo {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.25);
+}
+.skill-logo img,
+.skill-logo svg {
+  width: 36px;
+  height: 36px;
+}
+
+/* Technology Brand Colors (Replaces inline styles in HTML) */
+.skill-logo.html { background: rgba(228, 77, 38, 0.12); border-color: rgba(228, 77, 38, 0.25); }
+.skill-logo.css { background: rgba(38, 77, 228, 0.12); border-color: rgba(38, 77, 228, 0.25); }
+.skill-logo.js { background: rgba(234, 179, 8, 0.12); border-color: rgba(234, 179, 8, 0.25); }
+.skill-logo.php { background: rgba(120, 93, 216, 0.12); border-color: rgba(120, 93, 216, 0.25); }
+.skill-logo.react { background: rgba(97, 219, 251, 0.12); border-color: rgba(97, 219, 251, 0.25); }
+.skill-logo.node { background: rgba(83, 158, 83, 0.12); border-color: rgba(83, 158, 83, 0.25); }
+.skill-logo.mysql { background: rgba(0, 117, 143, 0.12); border-color: rgba(0, 117, 143, 0.25); }
+.skill-logo.python { background: rgba(55, 118, 171, 0.12); border-color: rgba(55, 118, 171, 0.25); }
+.skill-logo.git { background: rgba(240, 80, 50, 0.12); border-color: rgba(240, 80, 50, 0.25); }
+.skill-logo.vscode { background: rgba(0, 122, 204, 0.12); border-color: rgba(0, 122, 204, 0.25); }
+.skill-logo.figma { background: rgba(255, 97, 0, 0.12); border-color: rgba(255, 97, 0, 0.25); }
+.skill-logo.npm { background: rgba(255, 100, 30, 0.12); border-color: rgba(255, 100, 30, 0.25); }
+.skill-logo.postman { background: rgba(59, 130, 246, 0.12); border-color: rgba(59, 130, 246, 0.25); }
+.skill-logo.linux { background: rgba(0, 150, 136, 0.12); border-color: rgba(0, 150, 136, 0.25); }
+.skill-logo.bootstrap { background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.25); }
+.skill-logo.canva { background: rgba(6, 182, 212, 0.12); border-color: rgba(6, 182, 212, 0.25); }
+
+/* Soft Skill Colors (Replaces inline styles in HTML) */
+.skill-logo.blue { background: rgba(59, 130, 246, 0.12); border-color: rgba(59, 130, 246, 0.25); }
+.skill-logo.purple { background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.25); }
+.skill-logo.cyan { background: rgba(6, 182, 212, 0.12); border-color: rgba(6, 182, 212, 0.25); }
+.skill-logo.green { background: rgba(34, 197, 94, 0.12); border-color: rgba(34, 197, 94, 0.25); }
+.skill-logo.orange { background: rgba(251, 146, 60, 0.12); border-color: rgba(251, 146, 60, 0.25); }
+.skill-logo.pink { background: rgba(236, 72, 153, 0.12); border-color: rgba(236, 72, 153, 0.25); }
+.skill-logo.yellow { background: rgba(234, 179, 8, 0.12); border-color: rgba(234, 179, 8, 0.25); }
+
+.skill-name {
+  font-size: 0.92rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+.skill-desc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.skill-badge {
+  margin-top: 14px;
+}
+
+/* Soft Skill Overrides */
+.soft-card .skill-logo {
+  font-size: 1.8rem;
+}
+
+/* Skill Legend (Replaces inline styles) */
+.skill-legend {
+  margin-top: 32px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.skill-legend-title {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ===========================
+   RESPONSIVE SKILLS
+=========================== */
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 360px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
