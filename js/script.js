@@ -1,5 +1,5 @@
 /* ===========================
-   SHARED JS — portfolio
+    SHARED JS — portfolio
 =========================== */
 
 // Loading screen
@@ -130,7 +130,7 @@ document.querySelectorAll('.filter-btn').forEach((btn) => {
   });
 });
 
-// Contact form validation (contact.html)
+// Contact form validation & WhatsApp Redirect (DIGABUNGKAN AGAR TIDAK BENTROK)
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   const showError = (id, msg) => {
@@ -157,11 +157,16 @@ if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let valid = true;
+
+    // Ambil semua data input
     const name = document.getElementById('name')?.value.trim();
     const email = document.getElementById('email')?.value.trim();
+    const phone = document.getElementById('phone')?.value.trim() || '-';
+    const type = document.getElementById('type')?.value || '-';
     const subject = document.getElementById('subject')?.value.trim();
     const message = document.getElementById('message')?.value.trim();
 
+    // Validasi input
     if (!name) {
       showError('name', 'Nama lengkap wajib diisi.');
       valid = false;
@@ -179,19 +184,44 @@ if (contactForm) {
       valid = false;
     }
 
+    // Jika semua input valid, eksekusi pengiriman ke WhatsApp
     if (valid) {
+      const WA_NUMBER = '6285210157886';
       const btn = contactForm.querySelector('button[type=submit]');
+
       if (btn) {
         btn.textContent = 'Mengirim...';
         btn.disabled = true;
+        btn.classList.add('loading'); // Efek animasi loading
       }
+
+      // Format teks untuk WhatsApp
+      let waText = `Halo Aldentra! Saya ingin menghubungi Anda melalui portfolio Anda.\n\n`;
+      waText += `*Nama:* ${name}\n`;
+      waText += `*Email:* ${email}\n`;
+      waText += `*No. HP:* ${phone}\n`;
+      waText += `*Tujuan:* ${type}\n`;
+      waText += `*Subjek:* ${subject}\n\n`;
+      waText += `*Pesan:*\n${message}`;
+
       setTimeout(() => {
+        // Redirect ke WhatsApp
+        window.open(
+          `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waText)}`,
+          '_blank',
+        );
+
+        // Tampilkan pesan sukses di bawah form template
         const success = document.getElementById('form-success');
         if (success) success.classList.add('show');
+
+        // Reset form
         contactForm.reset();
+
         if (btn) {
           btn.textContent = 'Kirim Pesan';
           btn.disabled = false;
+          btn.classList.remove('loading');
         }
       }, 1400);
     }
