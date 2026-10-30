@@ -1,374 +1,959 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aldentra — Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/projects.css" />
-    <link rel="stylesheet" href="css/home.css" />
-  </head>
-  <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-      <div class="loader-logo">AS</div>
-      <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aldentra Supranatantra : Personal Developer Portfolio</title>
+  <meta name="description" content="Personal portfolio Aldentra Supranatantra, siswa SMK Negeri 1 Ciomas jurusan PPLG. Menampilkan proyek web development, arsitektur frontend, backend API, dan perjalanan belajar.">
 
-    <!-- Navbar -->
-    <nav>
-      <a href="index.html" class="nav-logo">AS</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a href="contact.html">Contact</a>
-    </div>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aldentra Supranatantra : Personal Developer Portfolio">
+  <meta property="og:description" content="Personal portfolio Aldentra Supranatantra : Siswa SMK Negeri 1 Ciomas (PPLG) & Web Developer.">
+  <meta property="og:type" content="website">
 
-    <!-- Hero -->
-    <main class="page-main">
-      <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-orb hero-orb-1"></div>
-        <div class="hero-orb hero-orb-2"></div>
-        <div class="dot-bg"></div>
+  <!-- Favicon Monogram -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230c1222'/><text x='16' y='22' font-family='Montserrat,sans-serif' font-size='14' font-weight='800' fill='%233b82f6' text-anchor='middle'>AL</text></svg>">
 
-        <div class="hero-inner">
-          <!-- Content -->
-          <div class="hero-content">
-            <div class="hero-tag">
-              <span></span>
-              Available for Internship &amp; Project
-            </div>
-            <h1 class="hero-name">
-              Halo, Saya<br />
-              <span class="hero-name-grad">Aldentra Supranatantra</span>
-            </h1>
-            <p class="hero-role">
-              Siswa SMK PPLG &nbsp;·&nbsp;
-              <span id="typed-text">Web Developer</span><span class="cursor-blink">|</span>
-            </p>
-            <p class="hero-desc">
-              Seorang pelajar yang bersemangat di bidang pengembangan web dan
-              game. Saya membangun aplikasi modern dengan teknologi terkini dan
-              terus belajar untuk menjadi developer profesional yang berdampak.
-            </p>
-            <div class="hero-actions">
-              <a href="projects.html" class="btn btn-primary">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                >
-                  <path d="M4 6h16M4 10h16M4 14h10" />
-                </svg>
-                Lihat Proyek
-              </a>
-              <a href="contact.html" class="btn btn-outline">Hubungi Saya</a>
-            </div>
-            <div class="hero-stats">
-              <div class="stat-item">
-                <div class="stat-num" data-count="6" data-suffix="+">0</div>
-                <div class="stat-label">Proyek Selesai</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-num" data-count="7" data-suffix="+">0</div>
-                <div class="stat-label">Teknologi</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-num" data-count="2" data-suffix="th">0</div>
-                <div class="stat-label">Pengalaman Belajar</div>
-              </div>
-            </div>
-          </div>
+  <!-- Montserrat Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-          <!-- Photo -->
-          <div class="hero-image-area">
-            <div class="hero-photo-wrap">
-              <div class="hero-photo-ring"></div>
-              <div class="hero-photo-placeholder">
-                <div class="avatar-icon"></div>
-                <span>Aldentra</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <!-- Consolidated Stylesheet -->
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+  <!-- =========================================================================
+       1. NAVIGATION BAR
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="brand" aria-label="Aldentra Supranatantra - Kembali ke beranda">
+        <span class="brand-monogram">AL</span>
+        <span class="brand-name">Aldentra</span>
+      </a>
 
-      <!-- Tech Stack Strip -->
-      <section class="tech-strip reveal">
-        <div class="tech-strip-inner">
-          <p class="tech-strip-label">Teknologi yang saya gunakan</p>
-          <div class="tech-icons">
-            <div class="tech-icon-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                alt="HTML5"
-                width="32"
-                height="32"
-              />
-              <span>HTML</span>
-            </div>
-            <div class="tech-icon-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                alt="CSS3"
-                width="32"
-                height="32"
-              />
-              <span>CSS</span>
-            </div>
-            <div class="tech-icon-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                alt="JavaScript"
-                width="32"
-                height="32"
-              />
-              <span>JavaScript</span>
-            </div>
-            <div class="tech-icon-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-                alt="PHP"
-                width="32"
-                height="32"
-              />
-              <span>PHP</span>
-            </div>
-            <div class="tech-icon-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                alt="React"
-                width="32"
-                height="32"
-              />
-              <span>React</span>
-            </div>
-            <div class="tech-icon-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                alt="Node.js"
-                width="32"
-                height="32"
-              />
-              <span>Node.js</span>
-            </div>
-            <div class="tech-icon-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                alt="MySQL"
-                width="32"
-                height="32"
-              />
-              <span>MySQL</span>
-            </div>
-            <div class="tech-icon-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                alt="Git"
-                width="32"
-                height="32"
-              />
-              <span>Git</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" aria-label="Menu Navigasi Utama">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
 
-      <!-- Featured Projects -->
-      <section class="featured reveal">
-        <div class="featured-header">
-          <div>
-            <div class="section-eyebrow">Proyek Unggulan</div>
-            <h2 class="section-title">Karya <span>Terbaik</span> Saya</h2>
-          </div>
-          <a href="projects.html" class="btn btn-outline btn-sm">Lihat Semua &rarr;</a>
-        </div>
-        <div class="featured-grid">
-          <!-- Project 1 -->
-          <div class="project-card reveal">
-            <div class="project-img">
-              <img src="assets/images/gambarproject1.png" alt="Smart Finance — Manajemen Keuangan Pribadi" />
-            </div>
-            <div class="project-body">
-              <div class="project-type">Web Application</div>
-              <div class="project-title">
-                Smart Finance — Manajemen Keuangan Pribadi
-              </div>
-              <div class="project-desc">
-                Platform keuangan personal berbasis web untuk mencatat pemasukan
-                dan pengeluaran, memantau anggaran bulanan, menganalisis pola
-                keuangan, serta berkonsultasi langsung dengan ahli keuangan
-                untuk keputusan finansial yang lebih cerdas.
-              </div>
-              <div class="project-features">
-                <div class="project-features-title">Fitur Utama</div>
-                <div class="project-feature">
-                  Pencatatan transaksi pemasukan & pengeluaran
-                </div>
-                <div class="project-feature">
-                  Ringkasan anggaran & laporan bulanan
-                </div>
-                <div class="project-feature">
-                  Visualisasi data keuangan dengan grafik
-                </div>
-                <div class="project-feature">
-                  Manajemen kategori pengeluaran
-                </div>
-                <div class="project-feature">
-                  Konsultasi keuangan dengan pakar finansial
-                </div>
-              </div>
-              <div class="project-tech-stack">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Express</span>
-                <span class="tech-tag">Tailwind Css</span>
-              </div>
-              <div class="project-actions">
-                <a
-                  href="https://smrtfinance.vercel.app/"
-                  class="btn btn-primary btn-sm"
-                  >Demo</a
-                >
-                <a
-                  href="https://github.com/Aldentra-S/dicoding-web.git"
-                  class="btn btn-outline btn-sm"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-          </div>
+      <!-- Desktop CTA -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">
+          Hubungi Saya
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
 
-          <!-- Project 2 -->
-          <div class="project-card reveal">
-            <div class="project-img">
-              <img src="assets/images/gambarproject2.png" alt="Bookshelf API" />
-            </div>
-            <div class="project-body">
-              <div class="project-type">REST API</div>
-              <div class="project-title">Bookshelf API</div>
-              <div class="project-desc">
-                RESTful API untuk manajemen koleksi buku pribadi. Mendukung
-                operasi CRUD lengkap — tambah, lihat, edit, dan hapus buku —
-                dengan validasi data dan penyimpanan berbasis in-memory.
-              </div>
-              <div class="project-features">
-                <div class="project-features-title">Fitur Utama</div>
-                <div class="project-feature">Tambah buku baru</div>
-                <div class="project-feature">Ambil semua buku</div>
-                <div class="project-feature">
-                  Ambil detail buku berdasarkan ID
-                </div>
-                <div class="project-feature">Update data buku</div>
-                <div class="project-feature">Hapus buku</div>
-              </div>
-              <div class="project-tech-stack">
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Express</span>
-                <span class="tech-tag">Postman</span>
-              </div>
-              <div class="project-actions">
-                <a
-                  href="https://github.com/Aldentra-S/bookshelf-api.git"
-                  class="btn btn-outline btn-sm"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="project-card reveal">
-            <div class="project-img">
-              <img src="assets/images/gambarproject3.png" alt="2D Platformer Game" />
-            </div>
-            <div class="project-body">
-              <div class="project-type">Game Development</div>
-              <div class="project-title">2D Platformer Game</div>
-              <div class="project-desc">
-                Game tebak angka berbasis web yang dibangun menggunakan HTML,
-                CSS, dan JavaScript murni dengan antarmuka yang interaktif dan
-                responsif.
-              </div>
-              <div class="project-features">
-                <div class="project-features-title">Fitur Utama</div>
-                <div class="project-feature">
-                  Sistem tebak kombinasi angka 1, 2, dan 3
-                </div>
-                <div class="project-feature">
-                  Feedback real-time setiap percobaan
-                </div>
-                <div class="project-feature">
-                  Antarmuka game board yang intuitif
-                </div>
-                <div class="project-feature">
-                  Desain responsif untuk semua perangkat
-                </div>
-              </div>
-              <div class="project-tech-stack">
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">CSS</span>
-                <span class="tech-tag">JavaScript</span>
-              </div>
-              <div class="project-actions">
-                <a
-                  href="https://tebak-angka123.vercel.app/"
-                  class="btn btn-primary btn-sm"
-                  >Play Game</a
-                >
-                <a
-                  href="https://github.com/Aldentra-S/tebakAngka123.git"
-                  class="btn btn-outline btn-sm"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-logo">AS</div>
-      <p>&copy; 2026 Aldentra · SMK PPLG</p>
-      <div class="footer-socials">
-        <a href="https://github.com/Aldentra-S" target="_blank">GitHub</a>
-        <a
-          href="https://www.linkedin.com/in/aldentra-supranatantra-3467963a5 "
-          target="_blank"
-          >LinkedIn</a
-        >
+        <!-- Mobile Hamburger Toggle -->
+        <button class="hamburger-btn" id="mobile-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Buka menu navigasi">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </div>
-    </footer>
+    </div>
 
-    <!-- Back to Top -->
-    <button id="back-to-top" title="Kembali ke atas">&#8679;</button>
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" hidden>
+      <nav aria-label="Menu Navigasi Mobile">
+        <ul class="mobile-nav-list">
+          <li><a href="#home" class="mobile-nav-link active">Home</a></li>
+          <li><a href="#about" class="mobile-nav-link">About</a></li>
+          <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+          <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-cta-wrapper">
+          <a href="#contact" class="btn btn-primary btn-block">Hubungi Saya</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-    <script src="js/script.js"></script>
-  </body>
+  <main id="main-content">
+    <!-- =========================================================================
+         2. HERO SECTION
+         ========================================================================= -->
+    <section class="hero-section" id="home" aria-label="Beranda">
+      <div class="container hero-container">
+        <!-- Left Column: Editorial Introduction -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">Halo, saya</div>
+          <h1 class="hero-title">
+            Aldentra<br>
+            <span>Supranatantra</span>
+          </h1>
+          <p class="hero-role">Siswa SMK PPLG &middot; Web Developer</p>
+          <p class="hero-description">
+            Saya adalah siswa SMK Negeri 1 Ciomas jurusan Pengembangan Perangkat Lunak dan Gim (PPLG). Fokus saya pada pengembangan aplikasi web yang fungsional, responsif, dan mudah digunakan.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              Lihat Proyek
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              Hubungi Saya
+            </a>
+          </div>
+
+          <!-- Factual Learning Stats -->
+          <div class="hero-stats" role="region" aria-label="Statistik Pembelajaran">
+            <div class="stat-item">
+              <span class="stat-number">6+</span>
+              <span class="stat-label">Proyek Selesai</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">7+</span>
+              <span class="stat-label">Teknologi Utama</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">2 Tahun</span>
+              <span class="stat-label">Pengalaman Belajar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Dual-Device Realistic Preview Frame -->
+        <div class="hero-visual">
+          <div class="device-composition" aria-label="Mockup pratinjau antarmuka aplikasi Smart Finance">
+            <!-- Laptop Chassis Mockup -->
+            <div class="laptop-mockup">
+              <div class="laptop-screen">
+                <div class="mockup-header-bar">
+                  <div class="window-dots" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="mockup-header-title">Smart Finance &middot; Dashboard</div>
+                </div>
+                <div class="laptop-display-content">
+                  <img
+                    src="assets/images/gambarproject1.png"
+                    alt="Tangkapan layar antarmuka aplikasi Smart Finance menampilkan grafik saldo dan transaksi"
+                    class="laptop-img"
+                    width="600"
+                    height="380"
+                    loading="eager"
+                  >
+                </div>
+              </div>
+              <div class="laptop-base" aria-hidden="true">
+                <div class="laptop-notch"></div>
+              </div>
+            </div>
+
+            <!-- Standing Mobile Phone Mockup -->
+            <div class="phone-mockup" aria-hidden="true">
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                <img
+                  src="assets/images/gambarproject1.png"
+                  alt=""
+                  class="phone-img"
+                  width="140"
+                  height="280"
+                  loading="eager"
+                >
+              </div>
+            </div>
+          </div>
+          <div class="mockup-caption">Smart Finance &middot; Web Application</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. TECHNOLOGY STACK RIBBON
+         ========================================================================= -->
+    <section class="section tech-stack-section" aria-label="Teknologi yang Digunakan">
+      <div class="container">
+        <div class="tech-header">
+          <h2 class="tech-title">TECHNOLOGY STACK</h2>
+          <p class="tech-subtitle">Teknologi yang saya gunakan dalam mengembangkan berbagai proyek.</p>
+        </div>
+
+        <div class="tech-grid">
+          <!-- 1. HTML5 -->
+          <div class="tech-card">
+            <div class="tech-icon-wrap icon-html5" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path d="M4 2L2 20L12 23L22 20L20 2H4Z" fill="#E44D26"/>
+                <path d="M12 3.8V21.1L19.9 18.7L21.6 3.8H12Z" fill="#F16529"/>
+                <path d="M12 8.4H8L8.4 12H12V14.8L9.2 14.1L9 12.5H6.2L6.6 16.5L12 18V8.4Z" fill="#EBEBEB"/>
+                <path d="M12 8.4H15.9L15.6 12H12V14.8L14.8 14.1L15.1 10.6H17.9L17.4 16.5L12 18V8.4Z" fill="#FFFFFF"/>
+              </svg>
+            </div>
+            <span class="tech-label">HTML5</span>
+          </div>
+
+          <!-- 2. CSS3 -->
+          <div class="tech-card">
+            <div class="tech-icon-wrap icon-css3" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path d="M4 2L2 20L12 23L22 20L20 2H4Z" fill="#1572B6"/>
+                <path d="M12 3.8V21.1L19.9 18.7L21.6 3.8H12Z" fill="#33A9DC"/>
+                <path d="M12 8.4H8L8.4 12H12V14.8L9.2 14.1L9 12.5H6.2L6.6 16.5L12 18V8.4Z" fill="#EBEBEB"/>
+                <path d="M12 8.4H15.9L15.6 12H12V14.8L14.8 14.1L15.1 10.6H17.9L17.4 16.5L12 18V8.4Z" fill="#FFFFFF"/>
+              </svg>
+            </div>
+            <span class="tech-label">CSS3</span>
+          </div>
+
+          <!-- 3. JavaScript -->
+          <div class="tech-card">
+            <div class="tech-icon-wrap icon-js" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <rect width="24" height="24" rx="4" fill="#F7DF1E"/>
+                <path d="M6 17.5C6.8 18.2 7.7 18.6 8.8 18.6C10.2 18.6 11 17.9 11 16.5V9.5H9V16.5C9 17.1 8.7 17.3 8.2 17.3C7.6 17.3 7 16.9 6.5 16.5L6 17.5ZM13 17.5C13.8 18.2 14.9 18.6 16.1 18.6C18.2 18.6 19.5 17.4 19.5 15.6C19.5 14 18.5 13.1 17 12.4L16.4 12.1C15.4 11.7 14.9 11.2 14.9 10.5C14.9 9.8 15.5 9.3 16.4 9.3C17.2 9.3 17.9 9.6 18.5 10.1L19 9C18.3 8.4 17.4 8.1 16.4 8.1C14.5 8.1 13.2 9.2 13.2 10.8C13.2 12.3 14.2 13.2 15.6 13.8L16.2 14.1C17.3 14.6 17.8 15.1 17.8 15.8C17.8 16.6 17.1 17.2 16 17.2C15 17.2 14.1 16.8 13.5 16.3L13 17.5Z" fill="#000000"/>
+              </svg>
+            </div>
+            <span class="tech-label">JavaScript</span>
+          </div>
+
+          <!-- 4. PHP -->
+          <div class="tech-card">
+            <div class="tech-icon-wrap icon-php" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <ellipse cx="12" cy="12" rx="11" ry="7" fill="#777BB4"/>
+                <path d="M7 14.5L7.8 9.5H9.8C10.8 9.5 11.4 10 11.2 11C11.1 11.9 10.4 12.5 9.4 12.5H8.3L7.9 14.5H7ZM8.7 11.3H9.4C9.9 11.3 10.2 11 10.3 10.6C10.3 10.3 10.1 10.1 9.7 10.1H9L8.7 11.3ZM12 14.5L12.8 9.5H14.1L13.7 11.7H14.9C15.9 11.7 16.4 12.2 16.2 13.2C16 14.2 15.2 14.5 14.3 14.5H12ZM13.3 13.4H14.1C14.6 13.4 15 13.2 15.1 12.8C15.2 12.4 14.9 12.3 14.5 12.3H13.5L13.3 13.4Z" fill="#FFFFFF"/>
+              </svg>
+            </div>
+            <span class="tech-label">PHP</span>
+          </div>
+
+          <!-- 5. React -->
+          <div class="tech-card">
+            <div class="tech-icon-wrap icon-react" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <ellipse cx="12" cy="12" rx="3.5" ry="9" stroke="#61DAFB" stroke-width="1.5" transform="rotate(30 12 12)"/>
+                <ellipse cx="12" cy="12" rx="3.5" ry="9" stroke="#61DAFB" stroke-width="1.5" transform="rotate(90 12 12)"/>
+                <ellipse cx="12" cy="12" rx="3.5" ry="9" stroke="#61DAFB" stroke-width="1.5" transform="rotate(150 12 12)"/>
+                <circle cx="12" cy="12" r="2" fill="#61DAFB"/>
+              </svg>
+            </div>
+            <span class="tech-label">React</span>
+          </div>
+
+          <!-- 6. Node.js -->
+          <div class="tech-card">
+            <div class="tech-icon-wrap icon-node" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L20.5 7V17L12 22L3.5 17V7L12 2Z" stroke="#339933" stroke-width="2" fill="#339933" fill-opacity="0.2"/>
+                <path d="M12 6L17 9V15L12 18L7 15V9L12 6Z" fill="#339933"/>
+              </svg>
+            </div>
+            <span class="tech-label">Node.js</span>
+          </div>
+
+          <!-- 7. MySQL -->
+          <div class="tech-card">
+            <div class="tech-icon-wrap icon-mysql" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3C6.5 3 2 5.5 2 8.5C2 10.3 3.6 11.9 6 12.8V15.5C6 18.5 8.7 21 12 21C15.3 21 18 18.5 18 15.5V12.8C20.4 11.9 22 10.3 22 8.5C22 5.5 17.5 3 12 3ZM12 5C16.4 5 20 6.6 20 8.5C20 10.4 16.4 12 12 12C7.6 12 4 10.4 4 8.5C4 6.6 7.6 5 12 5Z" fill="#00758F"/>
+              </svg>
+            </div>
+            <span class="tech-label">MySQL</span>
+          </div>
+
+          <!-- 8. Git -->
+          <div class="tech-card">
+            <div class="tech-icon-wrap icon-git" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="4" transform="rotate(45 12 12)" fill="#F05032"/>
+                <circle cx="12" cy="7" r="1.8" fill="#FFFFFF"/>
+                <circle cx="12" cy="17" r="1.8" fill="#FFFFFF"/>
+                <circle cx="16.5" cy="12.5" r="1.8" fill="#FFFFFF"/>
+                <path d="M12 8.8V15.2M12 12.5L15 12.5" stroke="#FFFFFF" stroke-width="1.8"/>
+              </svg>
+            </div>
+            <span class="tech-label">Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. ABOUT ME & LEARNING JOURNEY
+         ========================================================================= -->
+    <section class="section about-section" id="about" aria-label="Tentang Saya dan Perjalanan Belajar">
+      <div class="container">
+        <div class="about-editorial-grid">
+          <!-- Column 1: Tentang Saya -->
+          <div class="editorial-col">
+            <h2 class="col-heading">Tentang Saya</h2>
+            <p class="col-bio">
+              Saya adalah siswa SMK Negeri 1 Ciomas jurusan Pengembangan Perangkat Lunak dan Gim (PPLG). Berdomisili di Bogor, Jawa Barat. Saya selalu berusaha mengembangkan kemampuan di bidang web development dan teknologi untuk membangun solusi digital yang bermanfaat.
+            </p>
+
+            <ul class="meta-info-list" aria-label="Informasi Pribadi">
+              <li class="meta-item">
+                <span class="meta-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </span>
+                <span>Bogor, Jawa Barat</span>
+              </li>
+              <li class="meta-item">
+                <span class="meta-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                </span>
+                <span>SMK Negeri 1 Ciomas (PPLG)</span>
+              </li>
+              <li class="meta-item">
+                <span class="meta-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </span>
+                <span>Bahasa Indonesia (Aktif) &middot; Inggris (Dasar)</span>
+              </li>
+            </ul>
+
+            <div class="focus-block">
+              <div class="focus-title">Fokus Minat</div>
+              <div class="focus-tags">
+                <span class="tag">Web Development</span>
+                <span class="tag">Backend API</span>
+                <span class="tag">UI/UX Design</span>
+                <span class="tag">Game Development</span>
+                <span class="tag">Cloud Dasar</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Perjalanan Belajar (Timeline) -->
+          <div class="editorial-col">
+            <h2 class="col-heading">Perjalanan Belajar</h2>
+            <div class="vertical-timeline" role="region" aria-label="Garis Waktu Pendidikan">
+              <!-- Item 1: Kelas X -->
+              <div class="timeline-step">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-body">
+                  <span class="timeline-pill">Kelas X (2025 - 2026)</span>
+                  <h3 class="timeline-title">Fondasi Pengembangan Web</h3>
+                  <p class="timeline-desc">
+                    Mempelajari dasar-dasar pemrograman web, HTML, CSS, JavaScript dan membangun proyek pertama.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 2: Kelas XI -->
+              <div class="timeline-step">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-body">
+                  <span class="timeline-pill">Kelas XI (2026 - Sekarang)</span>
+                  <h3 class="timeline-title">Pendalaman Framework &amp; Database</h3>
+                  <p class="timeline-desc">
+                    Mengembangkan kemampuan dengan framework modern, database, dan membangun aplikasi yang lebih kompleks.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Pilar Pengembangan -->
+          <div class="editorial-col">
+            <div class="principles-card">
+              <h2 class="col-heading">Pilar Pengembangan</h2>
+              
+              <div class="principle-item">
+                <div class="principle-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div class="principle-content">
+                  <h3 class="principle-title">Clean &amp; Maintainable Architecture</h3>
+                  <p class="principle-desc">Menulis kode yang rapi, terstruktur, dan mudah dikembangkan.</p>
+                </div>
+              </div>
+
+              <div class="principle-item">
+                <div class="principle-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="8" r="2"></circle>
+                    <path d="M8 17s1.5-2 4-2 4 2 4 2"></path>
+                  </svg>
+                </div>
+                <div class="principle-content">
+                  <h3 class="principle-title">Accessibility &amp; Contrast First</h3>
+                  <p class="principle-desc">Membuat antarmuka yang inklusif dan mudah diakses semua pengguna.</p>
+                </div>
+              </div>
+
+              <div class="principle-item">
+                <div class="principle-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+                <div class="principle-content">
+                  <h3 class="principle-title">Performance &amp; Zero-Dependency</h3>
+                  <p class="principle-desc">Mengutamakan performa dan menghindari ketergantungan berlebih.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. FEATURED PROJECTS (PROYEK UNGGULAN)
+         ========================================================================= -->
+    <section class="section projects-section" id="projects" aria-label="Proyek Unggulan">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <h2 class="section-title">Proyek Unggulan</h2>
+            <p class="section-subtitle">Tiga proyek utama yang paling menunjukkan kemampuan dan fokus pengembangan saya.</p>
+          </div>
+          <a href="#other-projects" class="section-link">
+            Lihat Semua Proyek
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <div class="featured-projects-grid">
+          <!-- Card 1: Smart Finance -->
+          <article class="featured-card">
+            <div class="card-media">
+              <img
+                src="assets/images/gambarproject1.png"
+                alt="Antarmuka aplikasi Smart Finance menampilkan pencatatan transaksi dan grafik keuangan"
+                width="400"
+                height="225"
+                loading="lazy"
+                class="card-img"
+              >
+              <span class="card-badge">Featured</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Smart Finance</h3>
+              <p class="card-desc">
+                Aplikasi manajemen keuangan pribadi dengan fitur pencatatan transaksi, kategori, laporan, dan analisis.
+              </p>
+              <div class="card-tags">
+                <span class="tag">React</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <div class="card-links">
+                <a href="https://smrtfinance.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-action link-primary">
+                  Demo Live
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+                <a href="https://github.com/Aldentra-S/dicoding-web.git" target="_blank" rel="noopener noreferrer" class="link-action">
+                  GitHub
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Bookshelf API -->
+          <article class="featured-card">
+            <div class="card-media">
+              <img
+                src="assets/images/gambarproject2.png"
+                alt="Pengujian endpoint Bookshelf API pada Postman dengan respons status JSON"
+                width="400"
+                height="225"
+                loading="lazy"
+                class="card-img"
+              >
+              <span class="card-badge">Featured</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Bookshelf API</h3>
+              <p class="card-desc">
+                RESTful API untuk manajemen data buku dengan otentikasi, validasi, dan dokumentasi Postman.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">Postman</span>
+              </div>
+              <div class="card-links">
+                <a href="https://github.com/Aldentra-S/bookshelf-api.git" target="_blank" rel="noopener noreferrer" class="link-action">
+                  GitHub
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Game Tebak Angka 123 -->
+          <article class="featured-card">
+            <div class="card-media">
+              <img
+                src="assets/images/gambarproject3.png"
+                alt="Antarmuka game Tebak Angka 123 dengan tampilan papan skor dan interaksi tombol"
+                width="400"
+                height="225"
+                loading="lazy"
+                class="card-img"
+              >
+              <span class="card-badge">Featured</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Game Tebak Angka 123</h3>
+              <p class="card-desc">
+                Game tebak angka interaktif dengan sistem skor dan feedback suara.
+              </p>
+              <div class="card-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+              </div>
+              <div class="card-links">
+                <a href="https://tebak-angka123.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-action link-primary">
+                  Demo Live
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+                <a href="https://github.com/Aldentra-S/tebakAngka123.git" target="_blank" rel="noopener noreferrer" class="link-action">
+                  GitHub
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. OTHER PROJECTS (PROYEK LAINNYA)
+         ========================================================================= -->
+    <section class="section other-projects-section" id="other-projects" aria-label="Proyek Lainnya">
+      <div class="container">
+        <div class="section-header-compact">
+          <h2 class="section-title">Proyek Lainnya</h2>
+          <p class="section-subtitle">Proyek tambahan yang juga menunjukkan kemampuan dan eksplorasi saya.</p>
+        </div>
+
+        <div class="other-projects-grid">
+          <!-- Item 1: Catatan Pribadi -->
+          <article class="compact-card">
+            <div class="compact-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div class="compact-body">
+              <h3 class="compact-title">Aplikasi Catatan Pribadi</h3>
+              <p class="compact-desc">Aplikasi web untuk mencatat aktivitas harian dengan penyimpanan lokal.</p>
+              <div class="compact-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="compact-footer">
+                <a href="https://github.com/Aldentra-S/my-personal-notes.git" target="_blank" rel="noopener noreferrer" class="link-action">
+                  GitHub
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Pendaftaran Eskul -->
+          <article class="compact-card">
+            <div class="compact-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </div>
+            <div class="compact-body">
+              <h3 class="compact-title">Aplikasi Pendaftaran Eskul</h3>
+              <p class="compact-desc">Sistem pendaftaran ekstrakurikuler sekolah dengan fitur manajemen data.</p>
+              <div class="collab-note">
+                Kolaborasi dengan: <a href="https://github.com/habibtegar/Aplikasi_Pendaftaran_Eskul.git" target="_blank" rel="noopener noreferrer">habibtegar</a>
+              </div>
+              <div class="compact-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="compact-footer">
+                <a href="https://github.com/habibtegar/Aplikasi_Pendaftaran_Eskul.git" target="_blank" rel="noopener noreferrer" class="link-action">
+                  GitHub
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Bookshelf App (DOM Storage) -->
+          <article class="compact-card">
+            <div class="compact-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <div class="compact-body">
+              <h3 class="compact-title">Bookshelf App</h3>
+              <p class="compact-desc">Aplikasi katalog buku sederhana dengan interaktivitas DOM dan localStorage.</p>
+              <div class="compact-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="compact-footer">
+                <a href="https://github.com/Aldentra-S/bookshelf-app.git" target="_blank" rel="noopener noreferrer" class="link-action">
+                  GitHub
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. SKILLS MATRIX (TABBED INTERFACE)
+         ========================================================================= -->
+    <section class="section skills-section" id="skills" aria-label="Keahlian dan Teknologi">
+      <div class="container">
+        <div class="section-header-compact">
+          <h2 class="section-title">Keahlian &amp; Teknologi</h2>
+          <p class="section-subtitle">Tingkat pemahaman teknologi yang dipelajari dan diterapkan secara faktual pada proyek.</p>
+        </div>
+
+        <!-- Accessible WAI-ARIA Tabs -->
+        <div class="skills-tablist" role="tablist" aria-label="Kategori Keahlian">
+          <button class="skill-tab active" role="tab" id="tab-all" aria-selected="true" aria-controls="panel-all" tabindex="0">Semua</button>
+          <button class="skill-tab" role="tab" id="tab-frontend" aria-selected="false" aria-controls="panel-frontend" tabindex="-1">Frontend</button>
+          <button class="skill-tab" role="tab" id="tab-backend" aria-selected="false" aria-controls="panel-backend" tabindex="-1">Backend</button>
+          <button class="skill-tab" role="tab" id="tab-database" aria-selected="false" aria-controls="panel-database" tabindex="-1">Database</button>
+          <button class="skill-tab" role="tab" id="tab-tools" aria-selected="false" aria-controls="panel-tools" tabindex="-1">Tools</button>
+        </div>
+
+        <div class="skills-tab-content">
+          <!-- Panel All -->
+          <div class="skills-panel active" id="panel-all" role="tabpanel" aria-labelledby="tab-all">
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-top">
+                  <span class="skill-name">HTML5</span>
+                  <span class="skill-tag">Frontend</span>
+                </div>
+                <p class="skill-note">Semantik web, struktur dokumen W3C, dan aksesibilitas dasar.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top">
+                  <span class="skill-name">CSS3 &amp; Tailwind</span>
+                  <span class="skill-tag">Frontend</span>
+                </div>
+                <p class="skill-note">Responsive design, flexbox, CSS grid, dan arsitektur utility-first.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top">
+                  <span class="skill-name">JavaScript</span>
+                  <span class="skill-tag">Frontend</span>
+                </div>
+                <p class="skill-note">ES6+, DOM manipulation, asynchronous fetch, dan event handling.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top">
+                  <span class="skill-name">React</span>
+                  <span class="skill-tag">Frontend</span>
+                </div>
+                <p class="skill-note">Komponen modular, JSX, state management, dan hooks.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top">
+                  <span class="skill-name">PHP</span>
+                  <span class="skill-tag">Backend</span>
+                </div>
+                <p class="skill-note">Pemrograman server-side, routing dasar, dan pemrosesan form.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top">
+                  <span class="skill-name">Node.js &amp; Express</span>
+                  <span class="skill-tag">Backend</span>
+                </div>
+                <p class="skill-note">RESTful routing, middleware, dan arsitektur backend asynchronous.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top">
+                  <span class="skill-name">REST API</span>
+                  <span class="skill-tag">Backend</span>
+                </div>
+                <p class="skill-note">Perancangan endpoint CRUD, validasi payload, dan status code HTTP.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top">
+                  <span class="skill-name">MySQL</span>
+                  <span class="skill-tag">Database</span>
+                </div>
+                <p class="skill-note">Perancangan skema relasional, query SQL (SELECT, INSERT, UPDATE, JOIN).</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top">
+                  <span class="skill-name">Git &amp; GitHub</span>
+                  <span class="skill-tag">Tools</span>
+                </div>
+                <p class="skill-note">Version control, branching, repository management, dan kolaborasi tim.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top">
+                  <span class="skill-name">Postman</span>
+                  <span class="skill-tag">Tools</span>
+                </div>
+                <p class="skill-note">Pengujian request HTTP, inspeksi respons API, dan validasi data.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top">
+                  <span class="skill-name">VS Code</span>
+                  <span class="skill-tag">Tools</span>
+                </div>
+                <p class="skill-note">Lingkungan kerja utama, ekstensi produktivitas, dan debugging lokal.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel Frontend -->
+          <div class="skills-panel" id="panel-frontend" role="tabpanel" aria-labelledby="tab-frontend" hidden>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-top"><span class="skill-name">HTML5</span><span class="skill-tag">Frontend</span></div>
+                <p class="skill-note">Semantik web, struktur dokumen W3C, dan aksesibilitas dasar.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top"><span class="skill-name">CSS3 &amp; Tailwind</span><span class="skill-tag">Frontend</span></div>
+                <p class="skill-note">Responsive design, flexbox, CSS grid, dan arsitektur utility-first.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top"><span class="skill-name">JavaScript</span><span class="skill-tag">Frontend</span></div>
+                <p class="skill-note">ES6+, DOM manipulation, asynchronous fetch, dan event handling.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top"><span class="skill-name">React</span><span class="skill-tag">Frontend</span></div>
+                <p class="skill-note">Komponen modular, JSX, state management, dan hooks.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel Backend -->
+          <div class="skills-panel" id="panel-backend" role="tabpanel" aria-labelledby="tab-backend" hidden>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-top"><span class="skill-name">PHP</span><span class="skill-tag">Backend</span></div>
+                <p class="skill-note">Pemrograman server-side, routing dasar, dan pemrosesan form.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top"><span class="skill-name">Node.js &amp; Express</span><span class="skill-tag">Backend</span></div>
+                <p class="skill-note">RESTful routing, middleware, dan arsitektur backend asynchronous.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top"><span class="skill-name">REST API</span><span class="skill-tag">Backend</span></div>
+                <p class="skill-note">Perancangan endpoint CRUD, validasi payload, dan status code HTTP.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel Database -->
+          <div class="skills-panel" id="panel-database" role="tabpanel" aria-labelledby="tab-database" hidden>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-top"><span class="skill-name">MySQL</span><span class="skill-tag">Database</span></div>
+                <p class="skill-note">Perancangan skema relasional, query SQL (SELECT, INSERT, UPDATE, JOIN).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel Tools -->
+          <div class="skills-panel" id="panel-tools" role="tabpanel" aria-labelledby="tab-tools" hidden>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-top"><span class="skill-name">Git &amp; GitHub</span><span class="skill-tag">Tools</span></div>
+                <p class="skill-note">Version control, branching, repository management, dan kolaborasi tim.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top"><span class="skill-name">Postman</span><span class="skill-tag">Tools</span></div>
+                <p class="skill-note">Pengujian request HTTP, inspeksi respons API, dan validasi data.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-top"><span class="skill-name">VS Code</span><span class="skill-tag">Tools</span></div>
+                <p class="skill-note">Lingkungan kerja utama, ekstensi produktivitas, dan debugging lokal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. CONTACT SECTION (HUBUNGI SAYA / KIRIM PESAN)
+         ========================================================================= -->
+    <section class="section contact-section" id="contact" aria-label="Kontak">
+      <div class="container">
+        <div class="contact-dual-layout">
+          <!-- Left Column: Direct Info -->
+          <div class="contact-info-col">
+            <h2 class="contact-heading">Hubungi Saya</h2>
+            <p class="contact-desc">
+              Jika ada pertanyaan, peluang kolaborasi, atau sekadar ingin berdiskusi tentang teknologi, jangan ragu untuk menghubungi saya.
+            </p>
+
+            <ul class="contact-direct-list">
+              <li class="direct-item">
+                <span class="direct-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </span>
+                <a href="mailto:supranatantra10@gmail.com" class="direct-link">supranatantra10@gmail.com</a>
+              </li>
+              <li class="direct-item">
+                <span class="direct-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </span>
+                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="direct-link">+62 812 3456 7890</a>
+              </li>
+              <li class="direct-item">
+                <span class="direct-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </span>
+                <span class="direct-text">Bogor, Jawa Barat</span>
+              </li>
+            </ul>
+
+            <!-- Social Links Row -->
+            <div class="social-row">
+              <a href="https://github.com/Aldentra-S" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Profil GitHub Aldentra">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/aldentra-supranatantra-3467963a5" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Profil LinkedIn Aldentra">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.27a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6z"/>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://instagram.com/aldentra" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Profil Instagram Aldentra">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Message Form (WhatsApp Integration) -->
+          <div class="contact-form-card">
+            <h3 class="form-title">Kirim Pesan</h3>
+            <p class="form-subtitle">Saya akan segera merespons pesan Anda melalui WhatsApp.</p>
+
+            <form id="contact-form" novalidate>
+              <div class="form-row-3">
+                <div class="form-field">
+                  <label for="name" class="label">Nama Lengkap *</label>
+                  <input type="text" id="name" class="input" placeholder="Masukkan nama lengkap" required aria-required="true" aria-describedby="name-error">
+                  <span id="name-error" class="error-text" aria-live="polite"></span>
+                </div>
+
+                <div class="form-field">
+                  <label for="email" class="label">Email *</label>
+                  <input type="email" id="email" class="input" placeholder="nama@contoh.com" required aria-required="true" aria-describedby="email-error">
+                  <span id="email-error" class="error-text" aria-live="polite"></span>
+                </div>
+
+                <div class="form-field">
+                  <label for="subject" class="label">Subjek *</label>
+                  <input type="text" id="subject" class="input" placeholder="Pilih atau tulis subjek pesan" required aria-required="true" aria-describedby="subject-error">
+                  <span id="subject-error" class="error-text" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="message" class="label">Pesan *</label>
+                <textarea id="message" class="input textarea" rows="4" placeholder="Tulis pesan Anda di sini..." required aria-required="true" aria-describedby="message-error"></textarea>
+                <span id="message-error" class="error-text" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                Kirim via WhatsApp
+              </button>
+
+              <div id="form-success" class="form-notice" role="status" aria-live="polite" hidden>
+                Formulir valid. Mengalihkan ke WhatsApp...
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       9. FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="footer-monogram">AL</span>
+        <span class="footer-name">Aldentra Supranatantra</span>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navigasi Footer">
+        <ul class="footer-nav-list">
+          <li><a href="#home" class="footer-link">Home</a></li>
+          <li><a href="#about" class="footer-link">About</a></li>
+          <li><a href="#projects" class="footer-link">Projects</a></li>
+          <li><a href="#skills" class="footer-link">Skills</a></li>
+          <li><a href="#contact" class="footer-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-meta">
+        <p class="copyright">&copy; <span id="current-year">2026</span> Aldentra Supranatantra. Seluruh hak cipta dilindungi.</p>
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Kembali ke atas">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
 </html>

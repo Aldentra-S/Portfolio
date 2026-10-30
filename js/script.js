@@ -1,264 +1,303 @@
-/* ===========================
-    SHARED JS — portfolio
-=========================== */
+/**
+ * AL DENTRA PORTFOLIO : CLIENT SCRIPT
+ * Vanilla JavaScript (Zero Build / Zero Dependencies)
+ * Handles: Scrollspy, Mobile Navigation Drawer, Skills Tabs, Form Validation, Dynamic Year, Back-to-top
+ */
 
-// Loading screen
-window.addEventListener('load', () => {
-  const loader = document.getElementById('loading-screen');
-  if (loader) {
-    setTimeout(() => loader.classList.add('hidden'), 1500);
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. DYNAMIC FOOTER YEAR
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
   }
-});
 
-// Navbar scroll effect
-const nav = document.querySelector('nav');
-if (nav) {
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 30);
-  });
-}
+  // 2. MOBILE NAVIGATION DRAWER
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileDrawer = document.getElementById('mobile-drawer');
 
-// Mobile menu
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-if (hamburger && mobileMenu) {
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
-  // close on link click
-  mobileMenu.querySelectorAll('a').forEach((a) => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
+  if (mobileToggle && mobileDrawer) {
+    const toggleDrawer = (open) => {
+      const isExpanded = open !== undefined ? open : mobileToggle.getAttribute('aria-expanded') !== 'true';
+      mobileToggle.setAttribute('aria-expanded', String(isExpanded));
+      if (isExpanded) {
+        mobileDrawer.removeAttribute('hidden');
+      } else {
+        mobileDrawer.setAttribute('hidden', '');
+      }
+    };
+
+    mobileToggle.addEventListener('click', () => toggleDrawer());
+
+    // Close when clicking any mobile link
+    mobileDrawer.querySelectorAll('.mobile-nav-link, .btn').forEach((link) => {
+      link.addEventListener('click', () => {
+        toggleDrawer(false);
+      });
     });
-  });
-}
 
-// Back to top
-const btt = document.getElementById('back-to-top');
-if (btt) {
-  window.addEventListener('scroll', () => {
-    btt.classList.toggle('visible', window.scrollY > 300);
-  });
-  btt.addEventListener('click', () =>
-    window.scrollTo({ top: 0, behavior: 'smooth' }),
-  );
-}
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileToggle.getAttribute('aria-expanded') === 'true') {
+        toggleDrawer(false);
+        mobileToggle.focus();
+      }
+    });
 
-// Scroll reveal
-const revealEls = document.querySelectorAll(
-  '.reveal, .reveal-left, .reveal-right',
-);
-if (revealEls.length) {
-  const obs = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          obs.unobserve(e.target);
+    // Close on click outside
+    document.addEventListener('click', (e) => {
+      if (!mobileToggle.contains(e.target) && !mobileDrawer.contains(e.target)) {
+        if (mobileToggle.getAttribute('aria-expanded') === 'true') {
+          toggleDrawer(false);
+        }
+      }
+    });
+  }
+
+  // 3. SCROLLSPY (IntersectionObserver for Active Navigation Links)
+  const sections = document.querySelectorAll('section[id]');
+  const desktopLinks = document.querySelectorAll('.nav-link');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+  if (sections.length > 0 && 'IntersectionObserver' in window) {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -65% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const currentId = entry.target.getAttribute('id');
+          const targetHref = `#${currentId}`;
+
+          desktopLinks.forEach((link) => {
+            if (link.getAttribute('href') === targetHref) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+
+          mobileLinks.forEach((link) => {
+            if (link.getAttribute('href') === targetHref) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
         }
       });
-    },
-    { threshold: 0.12 },
-  );
-  revealEls.forEach((el) => obs.observe(el));
-}
+    }, observerOptions);
 
-// Active nav link
-const currentPage = location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links a, .mobile-menu a').forEach((a) => {
-  const href = a.getAttribute('href');
-  if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-    a.classList.add('active');
+    sections.forEach((section) => observer.observe(section));
+  }
+
+  // 4. BACK TO TOP BUTTON
+  const backToTop = document.getElementById('back-to-top');
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTop.style.opacity = '1';
+        backToTop.style.pointerEvents = 'auto';
+      } else {
+        backToTop.style.opacity = '0';
+        backToTop.style.pointerEvents = 'none';
+      }
+    }, { passive: true });
+
+    // Initial state
+    backToTop.style.opacity = '0';
+    backToTop.style.pointerEvents = 'none';
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // 5. SKILLS TAB SWITCHER (WAI-ARIA COMPLIANT)
+  const skillTabs = document.querySelectorAll('.skill-tab');
+  const skillPanels = document.querySelectorAll('.skills-panel');
+
+  if (skillTabs.length > 0) {
+    skillTabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => {
+        activateTab(tab);
+      });
+
+      tab.addEventListener('keydown', (e) => {
+        let targetIndex = null;
+        if (e.key === 'ArrowRight') {
+          targetIndex = (index + 1) % skillTabs.length;
+        } else if (e.key === 'ArrowLeft') {
+          targetIndex = (index - 1 + skillTabs.length) % skillTabs.length;
+        } else if (e.key === 'Home') {
+          targetIndex = 0;
+        } else if (e.key === 'End') {
+          targetIndex = skillTabs.length - 1;
+        }
+
+        if (targetIndex !== null) {
+          e.preventDefault();
+          skillTabs[targetIndex].focus();
+          activateTab(skillTabs[targetIndex]);
+        }
+      });
+    });
+
+    function activateTab(activeTab) {
+      const targetPanelId = activeTab.getAttribute('aria-controls');
+
+      skillTabs.forEach((t) => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+        t.setAttribute('tabindex', '-1');
+      });
+
+      activeTab.classList.add('active');
+      activeTab.setAttribute('aria-selected', 'true');
+      activeTab.setAttribute('tabindex', '0');
+
+      skillPanels.forEach((panel) => {
+        if (panel.id === targetPanelId) {
+          panel.classList.add('active');
+          panel.removeAttribute('hidden');
+        } else {
+          panel.classList.remove('active');
+          panel.setAttribute('hidden', '');
+        }
+      });
+    }
+  }
+
+  // 6. CONTACT FORM VALIDATION & WHATSAPP REDIRECT
+  const form = document.getElementById('contact-form');
+  if (form) {
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const subjectInput = document.getElementById('subject');
+    const messageInput = document.getElementById('message');
+    const formSuccess = document.getElementById('form-success');
+    const submitBtn = document.getElementById('submit-btn');
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const setError = (input, msg) => {
+      const errorEl = document.getElementById(`${input.id}-error`);
+      if (errorEl) {
+        errorEl.textContent = msg;
+      }
+      input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    };
+
+    const clearError = (input) => {
+      setError(input, '');
+    };
+
+    // Live validation on blur & input
+    [nameInput, emailInput, subjectInput, messageInput].forEach((input) => {
+      if (!input) return;
+      input.addEventListener('input', () => clearError(input));
+      input.addEventListener('blur', () => {
+        if (input === nameInput && !nameInput.value.trim()) {
+          setError(nameInput, 'Nama lengkap wajib diisi.');
+        } else if (input === emailInput) {
+          if (!emailInput.value.trim()) {
+            setError(emailInput, 'Email wajib diisi.');
+          } else if (!emailRegex.test(emailInput.value.trim())) {
+            setError(emailInput, 'Format email tidak valid.');
+          }
+        } else if (input === subjectInput && !subjectInput.value.trim()) {
+          setError(subjectInput, 'Subjek pesan wajib diisi.');
+        } else if (input === messageInput) {
+          if (!messageInput.value.trim()) {
+            setError(messageInput, 'Pesan wajib diisi.');
+          } else if (messageInput.value.trim().length < 10) {
+            setError(messageInput, 'Pesan minimal 10 karakter.');
+          }
+        }
+      });
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      let isValid = true;
+
+      // Validate Name
+      const nameVal = nameInput.value.trim();
+      if (!nameVal) {
+        setError(nameInput, 'Nama lengkap wajib diisi.');
+        isValid = false;
+      } else {
+        clearError(nameInput);
+      }
+
+      // Validate Email
+      const emailVal = emailInput.value.trim();
+      if (!emailVal) {
+        setError(emailInput, 'Email wajib diisi.');
+        isValid = false;
+      } else if (!emailRegex.test(emailVal)) {
+        setError(emailInput, 'Format email tidak valid.');
+        isValid = false;
+      } else {
+        clearError(emailInput);
+      }
+
+      // Validate Subject
+      const subjectVal = subjectInput.value.trim();
+      if (!subjectVal) {
+        setError(subjectInput, 'Subjek pesan wajib diisi.');
+        isValid = false;
+      } else {
+        clearError(subjectInput);
+      }
+
+      // Validate Message
+      const messageVal = messageInput.value.trim();
+      if (!messageVal) {
+        setError(messageInput, 'Pesan wajib diisi.');
+        isValid = false;
+      } else if (messageVal.length < 10) {
+        setError(messageInput, 'Pesan minimal 10 karakter.');
+        isValid = false;
+      } else {
+        clearError(messageInput);
+      }
+
+      if (!isValid) {
+        const firstError = form.querySelector('[aria-invalid="true"]');
+        if (firstError) firstError.focus();
+        return;
+      }
+
+      // Show success feedback
+      if (formSuccess) {
+        formSuccess.removeAttribute('hidden');
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Membuka WhatsApp...';
+      }
+
+      // Construct WhatsApp message
+      const textMessage = `Halo Aldentra, saya ${nameVal} (${emailVal}).\nSubjek: ${subjectVal}\n\nPesan:\n${messageVal}`;
+      const waNumber = '6281234567890';
+      const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(textMessage)}`;
+
+      // Redirect after brief delay
+      setTimeout(() => {
+        window.open(waUrl, '_blank', 'noopener,noreferrer');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            Kirim via WhatsApp
+          `;
+        }
+      }, 700);
+    });
   }
 });
-
-// Counter animation
-function animateCount(el, target, duration = 1800) {
-  let start = 0;
-  const step = (timestamp) => {
-    if (!start) start = timestamp;
-    const progress = Math.min((timestamp - start) / duration, 1);
-    const ease = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.floor(ease * target);
-    if (progress < 1) requestAnimationFrame(step);
-    else el.textContent = target + (el.dataset.suffix || '');
-  };
-  requestAnimationFrame(step);
-}
-document.querySelectorAll('[data-count]').forEach((el) => {
-  const io = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        animateCount(el, parseInt(el.dataset.count), 1600);
-        io.unobserve(el);
-      }
-    },
-    { threshold: 0.5 },
-  );
-  io.observe(el);
-});
-
-// Skills tab (skills.html)
-document.querySelectorAll('.skills-tab').forEach((tab) => {
-  tab.addEventListener('click', () => {
-    document
-      .querySelectorAll('.skills-tab')
-      .forEach((t) => t.classList.remove('active'));
-    document
-      .querySelectorAll('.skills-tab-panel')
-      .forEach((p) => p.classList.remove('active'));
-    tab.classList.add('active');
-    const panel = document.getElementById(tab.dataset.panel);
-    if (panel) panel.classList.add('active');
-  });
-});
-
-// Projects filter (projects.html)
-document.querySelectorAll('.filter-btn').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    document
-      .querySelectorAll('.filter-btn')
-      .forEach((b) => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    document.querySelectorAll('.project-card').forEach((card) => {
-      const show = filter === 'all' || card.dataset.category === filter;
-      card.style.display = show ? 'flex' : 'none';
-    });
-  });
-});
-
-// Contact form validation & WhatsApp Redirect (DIGABUNGKAN AGAR TIDAK BENTROK)
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-  const showError = (id, msg) => {
-    const el = document.getElementById(id + '-error');
-    const input = document.getElementById(id);
-    if (el) {
-      el.textContent = msg;
-      el.classList.add('show');
-    }
-    if (input) input.classList.add('error');
-  };
-  const clearError = (id) => {
-    const el = document.getElementById(id + '-error');
-    const input = document.getElementById(id);
-    if (el) el.classList.remove('show');
-    if (input) input.classList.remove('error');
-  };
-
-  ['name', 'email', 'subject', 'message'].forEach((id) => {
-    const el = document.getElementById(id);
-    if (el) el.addEventListener('input', () => clearError(id));
-  });
-
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    let valid = true;
-
-    // Ambil semua data input
-    const name = document.getElementById('name')?.value.trim();
-    const email = document.getElementById('email')?.value.trim();
-    const phone = document.getElementById('phone')?.value.trim() || '-';
-    const type = document.getElementById('type')?.value || '-';
-    const subject = document.getElementById('subject')?.value.trim();
-    const message = document.getElementById('message')?.value.trim();
-
-    // Validasi input
-    if (!name) {
-      showError('name', 'Nama lengkap wajib diisi.');
-      valid = false;
-    }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showError('email', 'Masukkan alamat email yang valid.');
-      valid = false;
-    }
-    if (!subject) {
-      showError('subject', 'Subjek pesan wajib diisi.');
-      valid = false;
-    }
-    if (!message || message.length < 10) {
-      showError('message', 'Pesan minimal 10 karakter.');
-      valid = false;
-    }
-
-    // Jika semua input valid, eksekusi pengiriman ke WhatsApp
-    if (valid) {
-      const WA_NUMBER = '6285210157886';
-      const btn = contactForm.querySelector('button[type=submit]');
-
-      if (btn) {
-        btn.textContent = 'Mengirim...';
-        btn.disabled = true;
-        btn.classList.add('loading'); // Efek animasi loading
-      }
-
-      // Format teks untuk WhatsApp
-      let waText = `Halo Aldentra! Saya ingin menghubungi Anda melalui portfolio Anda.\n\n`;
-      waText += `*Nama:* ${name}\n`;
-      waText += `*Email:* ${email}\n`;
-      waText += `*No. HP:* ${phone}\n`;
-      waText += `*Tujuan:* ${type}\n`;
-      waText += `*Subjek:* ${subject}\n\n`;
-      waText += `*Pesan:*\n${message}`;
-
-      setTimeout(() => {
-        // Redirect ke WhatsApp
-        window.open(
-          `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waText)}`,
-          '_blank',
-        );
-
-        // Tampilkan pesan sukses di bawah form template
-        const success = document.getElementById('form-success');
-        if (success) success.classList.add('show');
-
-        // Reset form
-        contactForm.reset();
-
-        if (btn) {
-          btn.textContent = 'Kirim Pesan';
-          btn.disabled = false;
-          btn.classList.remove('loading');
-        }
-      }, 1400);
-    }
-  });
-}
-
-// Typed text effect (home page)
-function typeWriter(el, texts, speed = 80) {
-  if (!el) return;
-  let i = 0,
-    j = 0,
-    deleting = false;
-  const loop = () => {
-    const current = texts[i];
-    if (deleting) {
-      el.textContent = current.substring(0, j--);
-      if (j < 0) {
-        deleting = false;
-        i = (i + 1) % texts.length;
-        setTimeout(loop, 500);
-        return;
-      }
-    } else {
-      el.textContent = current.substring(0, j++);
-      if (j > current.length) {
-        deleting = true;
-        setTimeout(loop, 1800);
-        return;
-      }
-    }
-    setTimeout(loop, deleting ? 40 : speed);
-  };
-  loop();
-}
-typeWriter(document.getElementById('typed-text'), [
-  'Web Developer',
-  'UI/UX Enthusiast',
-  'Game Developer',
-  'Problem Solver',
-]);
