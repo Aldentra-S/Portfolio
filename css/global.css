@@ -1417,21 +1417,6 @@ ul, ol {
   color: var(--text-primary);
 }
 
-.footer-nav-list {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.footer-link {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-}
-
-.footer-link:hover {
-  color: var(--text-primary);
-}
-
 .footer-meta {
   display: flex;
   align-items: center;
@@ -1527,11 +1512,6 @@ ul, ol {
   .footer-container {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
-  }
-
-  .footer-nav-list {
-    flex-wrap: wrap;
     gap: 16px;
   }
 }
