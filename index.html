@@ -87,6 +87,115 @@
          2. HERO SECTION (DARK EDITORIAL DEVELOPER PORTFOLIO)
          ========================================================================= -->
     <section class="hero-section" id="home" aria-label="Beranda">
+      <!-- Signature Dynamic Electric-Blue Curved Horizon & Arcs System (Full Hero Backdrop) -->
+      <div class="hero-backdrop" aria-hidden="true">
+        <svg class="hero-backdrop-svg" viewBox="0 0 1440 850" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <!-- Primary Grand Arc Luminous Gradient (Cyan to Electric Blue) -->
+            <linearGradient id="grand-arc-primary" x1="680" y1="0" x2="1350" y2="750" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.95"/>
+              <stop offset="18%" stop-color="#38bdf8" stop-opacity="1"/>
+              <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.9"/>
+              <stop offset="85%" stop-color="#1d4ed8" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/>
+            </linearGradient>
+
+            <!-- Outer Crescent Arc Gradient -->
+            <linearGradient id="outer-crescent-grad" x1="1100" y1="0" x2="1440" y2="450" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.9"/>
+              <stop offset="45%" stop-color="#38bdf8" stop-opacity="0.65"/>
+              <stop offset="85%" stop-color="#2563eb" stop-opacity="0.2"/>
+              <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/>
+            </linearGradient>
+
+            <!-- Inner Technical Dashed Arc Gradient -->
+            <linearGradient id="inner-tech-grad" x1="750" y1="60" x2="1280" y2="650" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.75"/>
+              <stop offset="55%" stop-color="#3b82f6" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0"/>
+            </linearGradient>
+
+            <!-- Flowing Horizon Wave Gradient -->
+            <linearGradient id="horizon-wave-grad" x1="450" y1="750" x2="1440" y2="680" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0"/>
+              <stop offset="35%" stop-color="#3b82f6" stop-opacity="0.45"/>
+              <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.2"/>
+            </linearGradient>
+
+            <!-- Localized Volumetric Glow Blur Filter -->
+            <filter id="hero-glow-blur" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="8" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+
+            <!-- Wide Ambient Diffused Glow Filter -->
+            <filter id="wide-ambient-blur" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="28"/>
+            </filter>
+          </defs>
+
+          <!-- 1. Localized Subtle Blue Ambient Lighting along upper arc contour -->
+          <ellipse cx="1060" cy="180" rx="280" ry="200" fill="#38bdf8" opacity="0.12" filter="url(#wide-ambient-blur)"/>
+          <ellipse cx="1250" cy="480" rx="220" ry="260" fill="#2563eb" opacity="0.08" filter="url(#wide-ambient-blur)"/>
+
+          <!-- 2. Tertiary Sweeping Horizon Wave (Flowing across lower hero) -->
+          <path
+            d="M 450 820 C 700 740, 980 670, 1240 680 C 1360 685, 1410 700, 1440 710"
+            stroke="url(#horizon-wave-grad)"
+            stroke-width="1.75"
+            stroke-linecap="round"
+          />
+
+          <!-- 3. Primary Grand Arc: Soft Volumetric Glow Aura Underlayer -->
+          <path
+            d="M 680 0 C 820 0, 1040 30, 1180 140 C 1320 250, 1400 420, 1380 620 C 1365 720, 1310 800, 1220 860"
+            stroke="#38bdf8"
+            stroke-width="9"
+            stroke-linecap="round"
+            opacity="0.25"
+            filter="url(#hero-glow-blur)"
+          />
+
+          <!-- 4. Primary Grand Arc: Crisp Luminous Core Filament -->
+          <path
+            d="M 680 0 C 820 0, 1040 30, 1180 140 C 1320 250, 1400 420, 1380 620 C 1365 720, 1310 800, 1220 860"
+            stroke="url(#grand-arc-primary)"
+            stroke-width="2.75"
+            stroke-linecap="round"
+          />
+
+          <!-- 5. Secondary Outer Crescent Arc (Framing Upper-Right Quadrant) -->
+          <path
+            d="M 1120 0 C 1260 20, 1390 100, 1440 240 C 1460 300, 1460 400, 1440 480"
+            stroke="url(#outer-crescent-grad)"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+
+          <!-- 6. Concentric Inner Technical Arc (Subtle Precision Line) -->
+          <path
+            d="M 760 60 C 890 60, 1070 120, 1180 230 C 1280 340, 1310 490, 1270 650"
+            stroke="url(#inner-tech-grad)"
+            stroke-width="1.25"
+            stroke-dasharray="9 7"
+            opacity="0.6"
+          />
+
+          <!-- 7. Outer Aerospace Faint Orbit Segment -->
+          <path
+            d="M 1240 30 C 1360 80, 1430 180, 1440 280"
+            stroke="#38bdf8"
+            stroke-width="1"
+            stroke-dasharray="3 10"
+            opacity="0.35"
+          />
+        </svg>
+      </div>
+
       <div class="container hero-container">
         <!-- Left Column: Personal Identity & Editorial Intro -->
         <div class="hero-content">
@@ -167,74 +276,9 @@
           </div>
         </div>
 
-        <!-- Right Column: Profile Frame & Signature Curved Lines -->
+        <!-- Right Column: Profile Frame -->
         <div class="hero-visual">
-          <div class="hero-visual-stage" aria-label="Area foto profil dan signature visual">
-            <!-- Signature Electric-Blue Curved Lines SVG (Matching Reference Design) -->
-            <svg class="signature-arcs-svg" viewBox="0 0 750 750" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <defs>
-                <!-- Primary Luminous Cyan to Electric Blue Gradient -->
-                <linearGradient id="arc-grad-primary" x1="160" y1="20" x2="720" y2="600" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#a5f3fc" stop-opacity="0.95"/>
-                  <stop offset="25%" stop-color="#38bdf8" stop-opacity="1"/>
-                  <stop offset="60%" stop-color="#3b82f6" stop-opacity="0.85"/>
-                  <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.15"/>
-                </linearGradient>
-
-                <!-- Secondary Soft Gradient -->
-                <linearGradient id="arc-grad-secondary" x1="260" y1="90" x2="700" y2="650" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.85"/>
-                  <stop offset="50%" stop-color="#2563eb" stop-opacity="0.5"/>
-                  <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/>
-                </linearGradient>
-
-                <!-- Luminous Blur Filter for Soft Volumetric Arc Aura -->
-                <filter id="arc-luminous-glow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feGaussianBlur stdDeviation="6" result="blur"/>
-                  <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                  </feMerge>
-                </filter>
-              </defs>
-
-              <!-- Ambient Soft Volumetric Arc Aura -->
-              <path
-                d="M 170 30 C 440 60, 710 210, 710 470 C 710 560, 660 640, 580 700"
-                stroke="#38bdf8"
-                stroke-width="7"
-                stroke-linecap="round"
-                opacity="0.22"
-                filter="url(#arc-luminous-glow)"
-              />
-
-              <!-- Outer Major Arc: Crisp Luminous Core -->
-              <path
-                d="M 170 30 C 440 60, 710 210, 710 470 C 710 560, 660 640, 580 700"
-                stroke="url(#arc-grad-primary)"
-                stroke-width="2.5"
-                stroke-linecap="round"
-              />
-
-              <!-- Inner Secondary Arc: Concentric Tech Arc -->
-              <path
-                d="M 270 80 C 480 140, 630 280, 630 480 C 630 540, 590 610, 530 650"
-                stroke="url(#arc-grad-secondary)"
-                stroke-width="1.5"
-                stroke-dasharray="10 7"
-                opacity="0.7"
-              />
-
-              <!-- Subtle Outer Cosmic Faint Segment -->
-              <path
-                d="M 350 20 C 570 75, 730 240, 730 420"
-                stroke="#38bdf8"
-                stroke-width="1"
-                stroke-dasharray="4 12"
-                opacity="0.3"
-              />
-            </svg>
-
+          <div class="hero-visual-stage" aria-label="Area foto profil Aldentra Supranatantra">
             <!-- Circular Profile Photo Frame Container -->
             <!-- LOKASI FOTO PROFIL: Ganti src di bawah dengan path file foto Anda (misal: src="assets/images/profile.jpg") -->
             <div class="profile-frame" aria-label="Bingkai foto profil Aldentra Supranatantra">

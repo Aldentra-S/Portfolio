@@ -696,15 +696,24 @@ ul, ol {
   justify-content: center;
 }
 
-/* Signature Cosmic Arcs */
-.signature-arcs-svg {
+/* Dynamic Full-Hero Background Curved Lines & Ambient Lighting */
+.hero-backdrop {
   position: absolute;
-  top: -18%;
-  right: -18%;
-  width: 140%;
-  height: 140%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
+}
+
+.hero-backdrop-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
   animation: arc-pulse 8s infinite alternate ease-in-out;
 }
 
@@ -1624,9 +1633,8 @@ ul, ol {
     max-width: 100%;
   }
 
-  .signature-arcs-svg {
-    width: 135%;
-    right: -15%;
+  .hero-backdrop-svg {
+    opacity: 0.85;
   }
 
   .profile-frame {
@@ -1697,10 +1705,8 @@ ul, ol {
     font-size: 3rem;
   }
 
-  .signature-arcs-svg {
-    width: 140%;
-    right: -20%;
-    opacity: 0.65;
+  .hero-backdrop-svg {
+    opacity: 0.75;
   }
 
   .skills-grid {
