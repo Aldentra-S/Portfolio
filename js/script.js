@@ -170,6 +170,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // 5b. PROJECT CATEGORY FILTER
+  const filterBtns = document.querySelectorAll('.project-filter-btn');
+  const projectCards = document.querySelectorAll('.showcase-card');
+
+  if (filterBtns.length > 0 && projectCards.length > 0) {
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        filterBtns.forEach((b) => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+
+        projectCards.forEach((card) => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = '';
+            card.removeAttribute('hidden');
+          } else {
+            card.style.display = 'none';
+            card.setAttribute('hidden', '');
+          }
+        });
+      });
+    });
+  }
+
   // 6. CONTACT FORM VALIDATION & WHATSAPP REDIRECT
   const form = document.getElementById('contact-form');
   if (form) {
@@ -318,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 8. SCROLL REVEAL (SUBTLE MOTION RESPECTING REDUCED MOTION)
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-    const revealTargets = document.querySelectorAll('.featured-card, .compact-card, .skill-item, .editorial-col');
+    const revealTargets = document.querySelectorAll('.showcase-card, .skill-category-card, .journey-node, .about-card, .featured-card, .compact-card, .skill-item, .editorial-col');
     
     revealTargets.forEach(el => {
       el.classList.add('reveal-item');

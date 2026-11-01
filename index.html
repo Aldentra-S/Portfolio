@@ -87,111 +87,152 @@
          2. HERO SECTION (DARK EDITORIAL DEVELOPER PORTFOLIO)
          ========================================================================= -->
     <section class="hero-section" id="home" aria-label="Beranda">
-      <!-- Signature Dynamic Electric-Blue Curved Horizon & Arcs System (Full Hero Backdrop) -->
+      <!-- Layered Flowing Blue Waves System (Organic Surface Waves Backdrop) -->
       <div class="hero-backdrop" aria-hidden="true">
         <svg class="hero-backdrop-svg" viewBox="0 0 1440 850" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
           <defs>
-            <!-- Primary Grand Arc Luminous Gradient (Cyan to Electric Blue) -->
-            <linearGradient id="grand-arc-primary" x1="680" y1="0" x2="1350" y2="750" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.95"/>
-              <stop offset="18%" stop-color="#38bdf8" stop-opacity="1"/>
-              <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.9"/>
-              <stop offset="85%" stop-color="#1d4ed8" stop-opacity="0.4"/>
+            <!-- 1. Primary Sweeping Wave Surface Gradient (Top Cyan Crest to Deep Navy Base) -->
+            <linearGradient id="main-wave-surface" x1="1260" y1="80" x2="1020" y2="380" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45"/>
+              <stop offset="28%" stop-color="#2563eb" stop-opacity="0.30"/>
+              <stop offset="65%" stop-color="#1d4ed8" stop-opacity="0.12"/>
+              <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+            </linearGradient>
+
+            <!-- 2. Primary Wave Crest Filament Gradient -->
+            <linearGradient id="main-crest-highlight" x1="1440" y1="80" x2="220" y2="850" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#67e8f9" stop-opacity="1"/>
+              <stop offset="18%" stop-color="#38bdf8" stop-opacity="0.95"/>
+              <stop offset="45%" stop-color="#3b82f6" stop-opacity="0.9"/>
+              <stop offset="75%" stop-color="#1d4ed8" stop-opacity="0.5"/>
               <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/>
             </linearGradient>
 
-            <!-- Outer Crescent Arc Gradient -->
-            <linearGradient id="outer-crescent-grad" x1="1100" y1="0" x2="1440" y2="450" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.9"/>
-              <stop offset="45%" stop-color="#38bdf8" stop-opacity="0.65"/>
-              <stop offset="85%" stop-color="#2563eb" stop-opacity="0.2"/>
-              <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/>
+            <!-- 3. Upper-Right Wave Surface Fold Gradient -->
+            <linearGradient id="upper-fold-surface" x1="1440" y1="20" x2="1100" y2="280" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.32"/>
+              <stop offset="50%" stop-color="#2563eb" stop-opacity="0.18"/>
+              <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
             </linearGradient>
 
-            <!-- Inner Technical Dashed Arc Gradient -->
-            <linearGradient id="inner-tech-grad" x1="750" y1="60" x2="1280" y2="650" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.75"/>
-              <stop offset="55%" stop-color="#3b82f6" stop-opacity="0.45"/>
-              <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0"/>
+            <!-- 4. Deep Billow Wave Background Surface Gradient -->
+            <linearGradient id="deep-billow-grad" x1="980" y1="0" x2="1440" y2="440" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.28"/>
+              <stop offset="55%" stop-color="#1d4ed8" stop-opacity="0.14"/>
+              <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
             </linearGradient>
 
-            <!-- Flowing Horizon Wave Gradient -->
-            <linearGradient id="horizon-wave-grad" x1="450" y1="750" x2="1440" y2="680" gradientUnits="userSpaceOnUse">
+            <!-- 5. Lower Dune Floor Wave Surface Gradient -->
+            <linearGradient id="floor-dune-surface" x1="1120" y1="710" x2="1120" y2="850" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#2563eb" stop-opacity="0.32"/>
+              <stop offset="45%" stop-color="#1d4ed8" stop-opacity="0.16"/>
+              <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+            </linearGradient>
+
+            <!-- 6. Lower Dune Ridge Highlight Gradient -->
+            <linearGradient id="floor-ridge-grad" x1="360" y1="850" x2="1440" y2="580" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0"/>
-              <stop offset="35%" stop-color="#3b82f6" stop-opacity="0.45"/>
-              <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.6"/>
+              <stop offset="35%" stop-color="#2563eb" stop-opacity="0.42"/>
+              <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.65"/>
               <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.2"/>
             </linearGradient>
 
-            <!-- Localized Volumetric Glow Blur Filter -->
-            <filter id="hero-glow-blur" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur stdDeviation="8" result="blur"/>
+            <!-- 7. Middle-Right Flank Wave Surface Gradient -->
+            <linearGradient id="middle-flank-surface" x1="1440" y1="480" x2="1120" y2="760" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.22"/>
+              <stop offset="60%" stop-color="#1d4ed8" stop-opacity="0.10"/>
+              <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+            </linearGradient>
+
+            <!-- 8. Atmospheric Diffusion Filter -->
+            <filter id="ambient-blur-broad" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="44"/>
+            </filter>
+
+            <!-- 9. Volumetric Glow Filter for Wave Ridges -->
+            <filter id="ridge-glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="7" result="blur"/>
               <feMerge>
                 <feMergeNode in="blur"/>
                 <feMergeNode in="SourceGraphic"/>
               </feMerge>
             </filter>
 
-            <!-- Wide Ambient Diffused Glow Filter -->
-            <filter id="wide-ambient-blur" x="-40%" y="-40%" width="180%" height="180%">
-              <feGaussianBlur stdDeviation="28"/>
+            <!-- 10. Soft Rim Glow Filter for Profile Frame Stage -->
+            <filter id="frame-stage-halo" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="16"/>
             </filter>
           </defs>
 
-          <!-- 1. Localized Subtle Blue Ambient Lighting along upper arc contour -->
-          <ellipse cx="1060" cy="180" rx="280" ry="200" fill="#38bdf8" opacity="0.12" filter="url(#wide-ambient-blur)"/>
-          <ellipse cx="1250" cy="480" rx="220" ry="260" fill="#2563eb" opacity="0.08" filter="url(#wide-ambient-blur)"/>
+          <!-- 1. Volumetric Blue Atmospheric Lighting in Deep Space -->
+          <ellipse cx="1180" cy="420" rx="380" ry="340" fill="#1e40af" opacity="0.22" filter="url(#ambient-blur-broad)"/>
+          <ellipse cx="1260" cy="180" rx="280" ry="180" fill="#0284c7" opacity="0.14" filter="url(#ambient-blur-broad)"/>
+          <ellipse cx="760" cy="740" rx="320" ry="180" fill="#1d4ed8" opacity="0.15" filter="url(#ambient-blur-broad)"/>
 
-          <!-- 2. Tertiary Sweeping Horizon Wave (Flowing across lower hero) -->
+          <!-- 2. Optical Halo directly positioned behind the Profile Frame -->
+          <circle cx="1180" cy="420" r="185" fill="#38bdf8" opacity="0.10" filter="url(#frame-stage-halo)"/>
+
+          <!-- 3. Layer 1: Deep Background Billow Wave Surface -->
           <path
-            d="M 450 820 C 700 740, 980 670, 1240 680 C 1360 685, 1410 700, 1440 710"
-            stroke="url(#horizon-wave-grad)"
+            d="M 980 0 C 1140 100, 1300 240, 1440 440 L 1440 0 Z"
+            fill="url(#deep-billow-grad)"
+          />
+
+          <!-- 4. Layer 2: Lower-Right Silk Dune Floor Surface (Rolling hill under circle) -->
+          <path
+            d="M 360 850 C 620 820, 880 770, 1120 720 C 1260 690, 1370 650, 1440 580 L 1440 850 Z"
+            fill="url(#floor-dune-surface)"
+          />
+          <!-- Crest ridge of lower dune -->
+          <path
+            d="M 360 850 C 620 820, 880 770, 1120 720 C 1260 690, 1370 650, 1440 580"
+            stroke="url(#floor-ridge-grad)"
+            stroke-width="2.25"
+            stroke-linecap="round"
+          />
+
+          <!-- 5. Layer 3: Middle-Right Flank Wave Surface (Behind right side of profile) -->
+          <path
+            d="M 1440 380 C 1320 460, 1160 550, 1120 720 L 1440 760 Z"
+            fill="url(#middle-flank-surface)"
+          />
+
+          <!-- 6. Layer 4: Upper-Right Secondary Silk Wave Fold -->
+          <path
+            d="M 1440 40 C 1280 80, 1080 180, 920 320 C 1040 230, 1220 140, 1440 120 Z"
+            fill="url(#upper-fold-surface)"
+          />
+          <!-- Highlight edge along upper wave fold -->
+          <path
+            d="M 1440 40 C 1280 80, 1080 180, 920 320"
+            stroke="#38bdf8"
             stroke-width="1.75"
             stroke-linecap="round"
+            opacity="0.5"
           />
 
-          <!-- 3. Primary Grand Arc: Soft Volumetric Glow Aura Underlayer -->
+          <!-- 7. Layer 5: The Primary Dramatic Wave Surface (Wide Flowing Volumetric Ribbon) -->
           <path
-            d="M 680 0 C 820 0, 1040 30, 1180 140 C 1320 250, 1400 420, 1380 620 C 1365 720, 1310 800, 1220 860"
+            d="M 1440 80 C 1220 140, 960 270, 780 480 C 640 660, 460 810, 220 850 L 260 850 C 480 820, 660 690, 820 540 C 1020 360, 1240 240, 1440 210 Z"
+            fill="url(#main-wave-surface)"
+          />
+
+          <!-- Primary Wave: Luminous Crest Glow Underlayer -->
+          <path
+            d="M 1440 80 C 1220 140, 960 270, 780 480 C 640 660, 460 810, 220 850"
             stroke="#38bdf8"
-            stroke-width="9"
+            stroke-width="14"
             stroke-linecap="round"
             opacity="0.25"
-            filter="url(#hero-glow-blur)"
+            filter="url(#ridge-glow-filter)"
           />
 
-          <!-- 4. Primary Grand Arc: Crisp Luminous Core Filament -->
+          <!-- Primary Wave: Razor-Sharp Luminous Cyan-to-Electric-Blue Ridge -->
           <path
-            d="M 680 0 C 820 0, 1040 30, 1180 140 C 1320 250, 1400 420, 1380 620 C 1365 720, 1310 800, 1220 860"
-            stroke="url(#grand-arc-primary)"
+            d="M 1440 80 C 1220 140, 960 270, 780 480 C 640 660, 460 810, 220 850"
+            stroke="url(#main-crest-highlight)"
             stroke-width="2.75"
             stroke-linecap="round"
-          />
-
-          <!-- 5. Secondary Outer Crescent Arc (Framing Upper-Right Quadrant) -->
-          <path
-            d="M 1120 0 C 1260 20, 1390 100, 1440 240 C 1460 300, 1460 400, 1440 480"
-            stroke="url(#outer-crescent-grad)"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-
-          <!-- 6. Concentric Inner Technical Arc (Subtle Precision Line) -->
-          <path
-            d="M 760 60 C 890 60, 1070 120, 1180 230 C 1280 340, 1310 490, 1270 650"
-            stroke="url(#inner-tech-grad)"
-            stroke-width="1.25"
-            stroke-dasharray="9 7"
-            opacity="0.6"
-          />
-
-          <!-- 7. Outer Aerospace Faint Orbit Segment -->
-          <path
-            d="M 1240 30 C 1360 80, 1430 180, 1440 280"
-            stroke="#38bdf8"
-            stroke-width="1"
-            stroke-dasharray="3 10"
-            opacity="0.35"
           />
         </svg>
       </div>
@@ -199,6 +240,9 @@
       <div class="container hero-container">
         <!-- Left Column: Personal Identity & Editorial Intro -->
         <div class="hero-content">
+          <!-- Micro-Eyebrow: Hi, I'm - -->
+          <div class="hero-intro-badge">Hi, I'm -</div>
+
           <!-- Bold Display Headline -->
           <h1 class="hero-title">
             <span class="title-first">Aldentra</span>
@@ -234,44 +278,13 @@
             </a>
           </div>
 
-          <!-- Floating Tech Stack Pill Capsule -->
-          <div class="hero-tech-capsule" role="region" aria-label="Teknologi Utama">
-            <div class="capsule-icons">
-              <span class="capsule-icon-item" title="HTML5">
-                <img src="assets/icons/html5.svg" alt="HTML5" width="22" height="22" loading="eager">
-              </span>
-              <span class="capsule-icon-item" title="CSS3">
-                <img src="assets/icons/css3.svg" alt="CSS3" width="22" height="22" loading="eager">
-              </span>
-              <span class="capsule-icon-item" title="Tailwind CSS">
-                <img src="assets/icons/tailwindcss.svg" alt="Tailwind CSS" width="22" height="22" loading="eager">
-              </span>
-              <span class="capsule-icon-item" title="React">
-                <img src="assets/icons/react.svg" alt="React" width="22" height="22" loading="eager">
-              </span>
-              <span class="capsule-icon-item" title="PHP">
-                <img src="assets/icons/php.svg" alt="PHP" width="22" height="22" loading="eager">
-              </span>
-              <span class="capsule-icon-item" title="Node.js">
-                <img src="assets/icons/nodejs.svg" alt="Node.js" width="22" height="22" loading="eager">
-              </span>
-              <span class="capsule-icon-item" title="Git">
-                <img src="assets/icons/git.svg" alt="Git" width="22" height="22" loading="eager">
-              </span>
-              <span class="capsule-icon-item" title="VS Code">
-                <img src="assets/icons/vscode.svg" alt="VS Code" width="22" height="22" loading="eager">
-              </span>
-            </div>
-            <a href="#skills" class="capsule-more" aria-label="Lihat seluruh keahlian">+ More</a>
-          </div>
-
-          <!-- Scroll to Explore Indicator -->
+          <!-- Mouse Scroll Indicator -->
           <div class="hero-scroll-wrapper">
             <a href="#about" class="hero-scroll-indicator" aria-label="Gulir ke bagian Tentang Saya">
               <span class="mouse-icon" aria-hidden="true">
                 <span class="mouse-wheel"></span>
               </span>
-              <span class="scroll-text">Scroll to explore</span>
+              <span>Scroll to explore</span>
             </a>
           </div>
         </div>
@@ -299,129 +312,177 @@
     </section>
 
     <!-- =========================================================================
-         3. ABOUT ME & LEARNING JOURNEY
+         3. ABOUT ME
          ========================================================================= -->
-    <section class="section about-section" id="about" aria-label="Tentang Saya dan Perjalanan Belajar">
+    <section class="section about-section" id="about" aria-label="Tentang Saya">
       <div class="container">
-        <div class="section-header-editorial">
-          <div class="section-eyebrow">ABOUT ME -</div>
-          <h2 class="section-title">Background &amp; <span class="text-accent">Journey</span></h2>
-          <p class="section-subtitle">Mengenal lebih dekat perjalanan belajar, pendidikan, dan prinsip rekayasa perangkat lunak saya.</p>
-        </div>
-        <div class="about-editorial-grid">
-          <!-- Column 1: Tentang Saya -->
-          <div class="editorial-col">
-            <h2 class="col-heading">Tentang Saya</h2>
-            <p class="col-bio">
-              Saya adalah siswa SMK Negeri 1 Ciomas jurusan Pengembangan Perangkat Lunak dan Gim (PPLG). Berdomisili di Bogor, Jawa Barat. Saya selalu berusaha mengembangkan kemampuan di bidang web development dan teknologi untuk membangun solusi digital yang bermanfaat.
+        <div class="about-showcase-layout">
+          <!-- Left Column: Narrative & CTA -->
+          <div class="about-narrative-col">
+            <div class="section-eyebrow">About Me -</div>
+            <h2 class="about-hero-title">Turning Ideas<br>into Real Solutions</h2>
+            <p class="about-hero-desc">
+              I'm a Software Developer who loves building web applications, exploring new technologies, and continuously learning to grow in this tech-driven world.
             </p>
-
-            <ul class="meta-info-list" aria-label="Informasi Pribadi">
-              <li class="meta-item">
-                <span class="meta-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                </span>
-                <span>Bogor, Jawa Barat</span>
-              </li>
-              <li class="meta-item">
-                <span class="meta-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-                </span>
-                <span>SMK Negeri 1 Ciomas (PPLG)</span>
-              </li>
-              <li class="meta-item">
-                <span class="meta-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                </span>
-                <span>Bahasa Indonesia (Aktif) &middot; Inggris (Dasar)</span>
-              </li>
-            </ul>
-
-            <div class="focus-block">
-              <div class="focus-title">Fokus Minat</div>
-              <div class="focus-tags">
-                <span class="tag">Web Development</span>
-                <span class="tag">Backend API</span>
-                <span class="tag">UI/UX Design</span>
-                <span class="tag">Game Development</span>
-                <span class="tag">Cloud Dasar</span>
-              </div>
+            <div class="about-action">
+              <a href="#projects" class="btn btn-outline-pill">
+                <span>Learn More</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
             </div>
           </div>
 
-          <!-- Column 2: Perjalanan Belajar (Timeline) -->
-          <div class="editorial-col">
-            <h2 class="col-heading">Perjalanan Belajar</h2>
-            <div class="vertical-timeline" role="region" aria-label="Garis Waktu Pendidikan">
-              <!-- Item 1: Kelas X -->
-              <div class="timeline-step">
-                <div class="timeline-marker" aria-hidden="true"></div>
-                <div class="timeline-body">
-                  <span class="timeline-pill">Kelas X (2025 - 2026)</span>
-                  <h3 class="timeline-title">Fondasi Pengembangan Web</h3>
-                  <p class="timeline-desc">
-                    Mempelajari dasar-dasar pemrograman web, HTML, CSS, JavaScript dan membangun proyek pertama.
-                  </p>
-                </div>
-              </div>
+          <!-- Vertical Divider Line -->
+          <div class="about-divider" aria-hidden="true"></div>
 
-              <!-- Item 2: Kelas XI -->
-              <div class="timeline-step">
-                <div class="timeline-marker" aria-hidden="true"></div>
-                <div class="timeline-body">
-                  <span class="timeline-pill">Kelas XI (2026 - Sekarang)</span>
-                  <h3 class="timeline-title">Pendalaman Framework &amp; Database</h3>
-                  <p class="timeline-desc">
-                    Mengembangkan kemampuan dengan framework modern, database, dan membangun aplikasi yang lebih kompleks.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Column 3: Pilar Pengembangan -->
-          <div class="editorial-col">
-            <div class="principles-card">
-              <h2 class="col-heading">Pilar Pengembangan</h2>
-              
-              <div class="principle-item">
-                <div class="principle-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
+          <!-- Right Column: Structured Credentials -->
+          <div class="about-meta-col">
+            <ul class="about-meta-list" aria-label="Informasi Kredensial">
+              <!-- Item 1: Education -->
+              <li class="about-meta-item">
+                <div class="about-icon-badge" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                   </svg>
                 </div>
-                <div class="principle-content">
-                  <h3 class="principle-title">Clean &amp; Maintainable Architecture</h3>
-                  <p class="principle-desc">Menulis kode yang rapi, terstruktur, dan mudah dikembangkan.</p>
+                <div class="about-meta-text">
+                  <h3 class="about-meta-label">Education</h3>
+                  <p class="about-meta-value">SMK Negeri 1 Ciomas (Software Development)</p>
                 </div>
-              </div>
+              </li>
 
-              <div class="principle-item">
-                <div class="principle-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <circle cx="12" cy="8" r="2"></circle>
-                    <path d="M8 17s1.5-2 4-2 4 2 4 2"></path>
-                  </svg>
-                </div>
-                <div class="principle-content">
-                  <h3 class="principle-title">Accessibility &amp; Contrast First</h3>
-                  <p class="principle-desc">Membuat antarmuka yang inklusif dan mudah diakses semua pengguna.</p>
-                </div>
-              </div>
-
-              <div class="principle-item">
-                <div class="principle-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Item 2: Focus -->
+              <li class="about-meta-item">
+                <div class="about-icon-badge" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                   </svg>
                 </div>
-                <div class="principle-content">
-                  <h3 class="principle-title">Performance &amp; Zero-Dependency</h3>
-                  <p class="principle-desc">Mengutamakan performa dan menghindari ketergantungan berlebih.</p>
+                <div class="about-meta-text">
+                  <h3 class="about-meta-label">Focus</h3>
+                  <p class="about-meta-value">Web Development, Software Engineering</p>
                 </div>
-              </div>
+              </li>
+
+              <!-- Item 3: Location -->
+              <li class="about-meta-item">
+                <div class="about-icon-badge" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="about-meta-text">
+                  <h3 class="about-meta-label">Location</h3>
+                  <p class="about-meta-value">Bogor, Jawa Barat</p>
+                </div>
+              </li>
+
+              <!-- Item 4: Interest -->
+              <li class="about-meta-item">
+                <div class="about-icon-badge" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </div>
+                <div class="about-meta-text">
+                  <h3 class="about-meta-label">Interest</h3>
+                  <p class="about-meta-value">Coding, Tech, Gaming</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. MY SKILLS
+         ========================================================================= -->
+    <section class="section skills-section" id="skills" aria-label="Keahlian dan Teknologi">
+      <div class="container">
+        <div class="skills-header-area">
+          <div class="section-eyebrow">My Skills -</div>
+          <h2 class="section-title">Technologies I Work With</h2>
+          <p class="section-subtitle">A collection of technologies and tools I use to build modern web applications.</p>
+        </div>
+
+        <div class="skills-matrix-grid">
+          <!-- Card 1: Frontend -->
+          <div class="skill-category-card">
+            <h3 class="skill-category-title">Frontend</h3>
+            <div class="skill-icon-row" aria-label="Teknologi Frontend">
+              <span class="skill-brand-icon" title="HTML5">
+                <img src="assets/icons/html5.svg" alt="HTML5" width="32" height="32" loading="lazy">
+              </span>
+              <span class="skill-brand-icon" title="CSS3">
+                <img src="assets/icons/css3.svg" alt="CSS3" width="32" height="32" loading="lazy">
+              </span>
+              <span class="skill-brand-icon" title="JavaScript">
+                <img src="assets/icons/javascript.svg" alt="JavaScript" width="32" height="32" loading="lazy">
+              </span>
+              <span class="skill-brand-icon" title="React">
+                <img src="assets/icons/react.svg" alt="React" width="32" height="32" loading="lazy">
+              </span>
+              <span class="skill-brand-icon" title="Tailwind CSS">
+                <img src="assets/icons/tailwindcss.svg" alt="Tailwind CSS" width="32" height="32" loading="lazy">
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 2: Backend -->
+          <div class="skill-category-card">
+            <h3 class="skill-category-title">Backend</h3>
+            <div class="skill-icon-row" aria-label="Teknologi Backend">
+              <span class="skill-brand-icon" title="Node.js">
+                <img src="assets/icons/nodejs.svg" alt="Node.js" width="32" height="32" loading="lazy">
+              </span>
+              <span class="skill-brand-icon" title="Express">
+                <img src="assets/icons/express.svg" alt="Express" width="32" height="32" loading="lazy">
+              </span>
+              <span class="skill-brand-icon" title="PHP">
+                <img src="assets/icons/php.svg" alt="PHP" width="32" height="32" loading="lazy">
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 3: Database -->
+          <div class="skill-category-card">
+            <h3 class="skill-category-title">Database</h3>
+            <div class="skill-icon-row" aria-label="Teknologi Database">
+              <span class="skill-brand-icon" title="PostgreSQL">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+              </span>
+              <span class="skill-brand-icon" title="MySQL">
+                <img src="assets/icons/mysql.svg" alt="MySQL" width="32" height="32" loading="lazy">
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 4: Tools -->
+          <div class="skill-category-card">
+            <h3 class="skill-category-title">Tools</h3>
+            <div class="skill-icon-row" aria-label="Peralatan Pengembangan">
+              <span class="skill-brand-icon" title="Git">
+                <img src="assets/icons/git.svg" alt="Git" width="32" height="32" loading="lazy">
+              </span>
+              <span class="skill-brand-icon" title="GitHub">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </span>
+              <span class="skill-brand-icon" title="VS Code">
+                <img src="assets/icons/vscode.svg" alt="VS Code" width="32" height="32" loading="lazy">
+              </span>
+              <span class="skill-brand-icon" title="Postman">
+                <img src="assets/icons/postman.svg" alt="Postman" width="32" height="32" loading="lazy">
+              </span>
             </div>
           </div>
         </div>
@@ -429,127 +490,185 @@
     </section>
 
     <!-- =========================================================================
-         5. FEATURED PROJECTS (PROYEK UNGGULAN)
+         5. SELECTED PROJECTS
          ========================================================================= -->
-    <section class="section projects-section" id="projects" aria-label="Proyek Unggulan">
+    <section class="section projects-section" id="projects" aria-label="Proyek Pilihan">
       <div class="container">
-        <div class="section-header-row">
-          <div class="section-header-editorial">
-            <div class="section-eyebrow">MY PROJECTS -</div>
-            <h2 class="section-title">Featured <span class="text-accent">Projects</span></h2>
-            <p class="section-subtitle">Tiga proyek utama yang paling menunjukkan kemampuan dan fokus pengembangan saya.</p>
+        <div class="projects-header-row">
+          <div class="projects-header-text">
+            <div class="section-eyebrow">Selected Projects -</div>
+            <h2 class="section-title">Explore My Works</h2>
           </div>
-          <a href="#other-projects" class="section-link">
-            <span>Lihat Semua Proyek</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
+
+          <!-- Project Filter Tabs -->
+          <div class="projects-filter-bar" role="tablist" aria-label="Filter Kategori Proyek">
+            <button class="project-filter-btn active" role="tab" aria-selected="true" data-filter="all">All</button>
+            <button class="project-filter-btn" role="tab" aria-selected="false" data-filter="web-app">Web App</button>
+            <button class="project-filter-btn" role="tab" aria-selected="false" data-filter="api">API</button>
+            <button class="project-filter-btn" role="tab" aria-selected="false" data-filter="game">Game</button>
+          </div>
         </div>
 
-        <div class="featured-projects-grid">
+        <div class="projects-showcase-grid">
           <!-- Card 1: Smart Finance -->
-          <article class="featured-card">
-            <div class="card-media">
+          <article class="showcase-card" data-category="web-app">
+            <div class="showcase-img-wrap">
               <img
                 src="assets/images/gambarproject1.png"
-                alt="Antarmuka aplikasi Smart Finance menampilkan pencatatan transaksi dan grafik keuangan"
+                alt="Antarmuka aplikasi Smart Finance menampilkan dashboard manajemen keuangan"
                 width="400"
                 height="225"
                 loading="lazy"
-                class="card-img"
+                class="showcase-img"
               >
-              <span class="card-badge">Featured</span>
             </div>
-            <div class="card-body">
-              <h3 class="card-title">Smart Finance</h3>
-              <p class="card-desc">
-                Aplikasi manajemen keuangan pribadi dengan fitur pencatatan transaksi, kategori, laporan, dan analisis.
-              </p>
-              <div class="card-tags">
-                <span class="tag">React</span>
-                <span class="tag">Tailwind CSS</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">Express</span>
-                <span class="tag">MySQL</span>
-              </div>
-              <div class="card-links">
-                <a href="https://smrtfinance.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-action link-primary">
-                  Demo Live
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            <div class="showcase-body">
+              <h3 class="showcase-title">Smart Finance</h3>
+              <p class="showcase-desc">Personal Finance Web Application</p>
+              <div class="showcase-links">
+                <a href="https://smrtfinance.vercel.app/" target="_blank" rel="noopener noreferrer" class="showcase-link">
+                  <span>Live Demo</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </a>
-                <a href="https://github.com/Aldentra-S/dicoding-web.git" target="_blank" rel="noopener noreferrer" class="link-action">
-                  GitHub
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                <a href="https://github.com/Aldentra-S/dicoding-web.git" target="_blank" rel="noopener noreferrer" class="showcase-link">
+                  <span>Source Code</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </a>
               </div>
             </div>
           </article>
 
           <!-- Card 2: Bookshelf API -->
-          <article class="featured-card">
-            <div class="card-media">
+          <article class="showcase-card" data-category="api">
+            <div class="showcase-img-wrap">
               <img
                 src="assets/images/gambarproject2.png"
                 alt="Pengujian endpoint Bookshelf API pada Postman dengan respons status JSON"
                 width="400"
                 height="225"
                 loading="lazy"
-                class="card-img"
+                class="showcase-img"
               >
-              <span class="card-badge">Featured</span>
             </div>
-            <div class="card-body">
-              <h3 class="card-title">Bookshelf API</h3>
-              <p class="card-desc">
-                RESTful API untuk manajemen data buku dengan otentikasi, validasi, dan dokumentasi Postman.
-              </p>
-              <div class="card-tags">
-                <span class="tag">Node.js</span>
-                <span class="tag">Express</span>
-                <span class="tag">Postman</span>
-              </div>
-              <div class="card-links">
-                <a href="https://github.com/Aldentra-S/bookshelf-api.git" target="_blank" rel="noopener noreferrer" class="link-action">
-                  GitHub
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            <div class="showcase-body">
+              <h3 class="showcase-title">Bookshelf API</h3>
+              <p class="showcase-desc">RESTful API for Book Management</p>
+              <div class="showcase-links">
+                <a href="https://github.com/Aldentra-S/bookshelf-api.git" target="_blank" rel="noopener noreferrer" class="showcase-link">
+                  <span>Source Code</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- Card 3: Game Tebak Angka 123 -->
-          <article class="featured-card">
-            <div class="card-media">
+          <!-- Card 3: Aplikasi Catatan Pribadi -->
+          <article class="showcase-card" data-category="web-app">
+            <div class="showcase-img-wrap">
               <img
-                src="assets/images/gambarproject3.png"
-                alt="Antarmuka game Tebak Angka 123 dengan tampilan papan skor dan interaksi tombol"
+                src="assets/images/gambarproject4.png"
+                alt="Antarmuka aplikasi Catatan Pribadi dengan fitur pencatatan dan arsip"
                 width="400"
                 height="225"
                 loading="lazy"
-                class="card-img"
+                class="showcase-img"
               >
-              <span class="card-badge">Featured</span>
             </div>
-            <div class="card-body">
-              <h3 class="card-title">Game Tebak Angka 123</h3>
-              <p class="card-desc">
-                Game tebak angka interaktif dengan sistem skor dan feedback suara.
-              </p>
-              <div class="card-tags">
-                <span class="tag">JavaScript</span>
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-              </div>
-              <div class="card-links">
-                <a href="https://tebak-angka123.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-action link-primary">
-                  Demo Live
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            <div class="showcase-body">
+              <h3 class="showcase-title">Aplikasi Catatan Pribadi</h3>
+              <p class="showcase-desc">Simple Notes Web Application</p>
+              <div class="showcase-links">
+                <a href="https://my-personal-notes-gamma.vercel.app/" target="_blank" rel="noopener noreferrer" class="showcase-link">
+                  <span>Live Demo</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </a>
-                <a href="https://github.com/Aldentra-S/tebakAngka123.git" target="_blank" rel="noopener noreferrer" class="link-action">
-                  GitHub
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                <a href="https://github.com/Aldentra-S/my-personal-notes.git" target="_blank" rel="noopener noreferrer" class="showcase-link">
+                  <span>Source Code</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Aplikasi Pendaftaran Eskul -->
+          <article class="showcase-card" data-category="web-app">
+            <div class="showcase-img-wrap">
+              <img
+                src="assets/images/gambarproject5.png"
+                alt="Antarmuka sistem Aplikasi Pendaftaran Eskul siswa"
+                width="400"
+                height="225"
+                loading="lazy"
+                class="showcase-img"
+              >
+            </div>
+            <div class="showcase-body">
+              <h3 class="showcase-title">Aplikasi Pendaftaran Eskul</h3>
+              <p class="showcase-desc">School Extracurricular Registration</p>
+              <div class="showcase-links">
+                <a href="https://aplikasi-pendaftaran-eskul.vercel.app/" target="_blank" rel="noopener noreferrer" class="showcase-link">
+                  <span>Live Demo</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+                <a href="https://github.com/habibtegar/Aplikasi_Pendaftaran_Eskul.git" target="_blank" rel="noopener noreferrer" class="showcase-link">
+                  <span>Source Code</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Bookshelf App -->
+          <article class="showcase-card" data-category="web-app">
+            <div class="showcase-img-wrap">
+              <img
+                src="assets/images/gambarproject6.png"
+                alt="Antarmuka Bookshelf App untuk mengorganisir daftar buku yang sedang dibaca"
+                width="400"
+                height="225"
+                loading="lazy"
+                class="showcase-img"
+              >
+            </div>
+            <div class="showcase-body">
+              <h3 class="showcase-title">Bookshelf App</h3>
+              <p class="showcase-desc">Book Collection Web App</p>
+              <div class="showcase-links">
+                <a href="https://bookshelf-app-amber.vercel.app/" target="_blank" rel="noopener noreferrer" class="showcase-link">
+                  <span>Live Demo</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+                <a href="https://github.com/Aldentra-S/bookshelf-app.git" target="_blank" rel="noopener noreferrer" class="showcase-link">
+                  <span>Source Code</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Game Tebak Angka 123 -->
+          <article class="showcase-card" data-category="game">
+            <div class="showcase-img-wrap">
+              <img
+                src="assets/images/gambarproject3.png"
+                alt="Antarmuka Game Tebak Angka 123 dengan tampilan interaktif"
+                width="400"
+                height="225"
+                loading="lazy"
+                class="showcase-img"
+              >
+            </div>
+            <div class="showcase-body">
+              <h3 class="showcase-title">Game Tebak Angka 123</h3>
+              <p class="showcase-desc">Fun Number Guessing Game</p>
+              <div class="showcase-links">
+                <a href="https://tebak-angka123.vercel.app/" target="_blank" rel="noopener noreferrer" class="showcase-link">
+                  <span>Live Demo</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+                <a href="https://github.com/Aldentra-S/tebakAngka123.git" target="_blank" rel="noopener noreferrer" class="showcase-link">
+                  <span>Source Code</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </a>
               </div>
             </div>
@@ -559,428 +678,114 @@
     </section>
 
     <!-- =========================================================================
-         6. OTHER PROJECTS (PROYEK LAINNYA)
+         6. EXPERIENCE & JOURNEY
          ========================================================================= -->
-    <section class="section other-projects-section" id="other-projects" aria-label="Proyek Lainnya">
+    <section class="section journey-section" id="journey" aria-label="Pengalaman dan Perjalanan">
       <div class="container">
-        <div class="section-header-editorial">
-          <div class="section-eyebrow">EXPLORE MORE -</div>
-          <h2 class="section-title">Other <span class="text-accent">Projects</span></h2>
-          <p class="section-subtitle">Proyek tambahan yang juga menunjukkan kemampuan dan eksplorasi saya.</p>
+        <div class="journey-header-area">
+          <div class="section-eyebrow">Experience &amp; Journey -</div>
+          <h2 class="section-title">My Learning Journey</h2>
         </div>
 
-        <div class="other-projects-grid">
-          <!-- Item 1: Catatan Pribadi -->
-          <article class="compact-card">
-            <div class="compact-icon-wrap" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-            </div>
-            <div class="compact-body">
-              <h3 class="compact-title">Aplikasi Catatan Pribadi</h3>
-              <p class="compact-desc">Aplikasi web untuk mencatat aktivitas harian dengan antarmuka modular.</p>
-              <div class="compact-tags">
-                <span class="tag">React</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Vite</span>
-                <span class="tag">CSS</span>
-              </div>
-              <div class="compact-footer">
-                <a href="https://my-personal-notes-gamma.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-action link-primary">
-                  Demo
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </a>
-                <a href="https://github.com/Aldentra-S/my-personal-notes.git" target="_blank" rel="noopener noreferrer" class="link-action">
-                  GitHub
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </a>
-              </div>
-            </div>
-          </article>
+        <div class="journey-dual-layout">
+          <!-- Left Column: Connected Timeline -->
+          <div class="journey-timeline-col">
+            <ol class="journey-timeline" aria-label="Linimasa Perjalanan">
+              <!-- Node 1 -->
+              <li class="journey-node">
+                <span class="journey-marker" aria-hidden="true"></span>
+                <div class="journey-content">
+                  <span class="journey-year">2026</span>
+                  <h3 class="journey-role">Coding Camp powered by DBS</h3>
+                  <p class="journey-desc">Intensive learning program in web development.</p>
+                </div>
+              </li>
 
-          <!-- Item 2: Pendaftaran Eskul -->
-          <article class="compact-card">
-            <div class="compact-icon-wrap" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="7" height="7"></rect>
-                <rect x="14" y="3" width="7" height="7"></rect>
-                <rect x="14" y="14" width="7" height="7"></rect>
-                <rect x="3" y="14" width="7" height="7"></rect>
-              </svg>
-            </div>
-            <div class="compact-body">
-              <h3 class="compact-title">Aplikasi Pendaftaran Eskul</h3>
-              <p class="compact-desc">Sistem pendaftaran ekstrakurikuler sekolah dengan fitur manajemen data.</p>
-              <div class="collab-note">
-                Kolaborasi dengan: <a href="https://github.com/habibtegar/Aplikasi_Pendaftaran_Eskul.git" target="_blank" rel="noopener noreferrer">habibtegar</a>
-              </div>
-              <div class="compact-tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">Tailwind CSS</span>
-                <span class="tag">JavaScript</span>
-              </div>
-              <div class="compact-footer">
-                <a href="https://aplikasi-pendaftaran-eskul.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-action link-primary">
-                  Demo
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </a>
-                <a href="https://github.com/habibtegar/Aplikasi_Pendaftaran_Eskul.git" target="_blank" rel="noopener noreferrer" class="link-action">
-                  GitHub
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </a>
-              </div>
-            </div>
-          </article>
+              <!-- Node 2 -->
+              <li class="journey-node">
+                <span class="journey-marker" aria-hidden="true"></span>
+                <div class="journey-content">
+                  <span class="journey-year">2024 - Present</span>
+                  <h3 class="journey-role">SMK Negeri 1 Ciomas</h3>
+                  <p class="journey-desc">Studying Software Development and Gaming.</p>
+                </div>
+              </li>
 
-          <!-- Item 3: Bookshelf App (DOM Storage) -->
-          <article class="compact-card">
-            <div class="compact-icon-wrap" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-              </svg>
-            </div>
-            <div class="compact-body">
-              <h3 class="compact-title">Bookshelf App</h3>
-              <p class="compact-desc">Aplikasi katalog buku sederhana dengan interaktivitas DOM dan localStorage.</p>
-              <div class="compact-tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">LocalStorage</span>
-              </div>
-              <div class="compact-footer">
-                <a href="https://bookshelf-app-amber.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-action link-primary">
-                  Demo
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </a>
-                <a href="https://github.com/Aldentra-S/bookshelf-app.git" target="_blank" rel="noopener noreferrer" class="link-action">
-                  GitHub
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+              <!-- Node 3 -->
+              <li class="journey-node">
+                <span class="journey-marker" aria-hidden="true"></span>
+                <div class="journey-content">
+                  <span class="journey-year">2024</span>
+                  <h3 class="journey-role">Personal Projects</h3>
+                  <p class="journey-desc">Building various projects to improve skills.</p>
+                </div>
+              </li>
 
-    <!-- =========================================================================
-         7. SKILLS MATRIX (TABBED INTERFACE)
-         ========================================================================= -->
-    <section class="section skills-section" id="skills" aria-label="Keahlian dan Teknologi">
-      <div class="container">
-        <div class="section-header-editorial">
-          <div class="section-eyebrow">CAPABILITIES -</div>
-          <h2 class="section-title">Skills &amp; <span class="text-accent">Technologies</span></h2>
-          <p class="section-subtitle">Tingkat pemahaman teknologi yang dipelajari dan diterapkan secara faktual pada proyek.</p>
-        </div>
-
-        <!-- Accessible WAI-ARIA Tabs -->
-        <div class="skills-tablist" role="tablist" aria-label="Kategori Keahlian">
-          <button class="skill-tab active" role="tab" id="tab-all" aria-selected="true" aria-controls="panel-all" tabindex="0">Semua</button>
-          <button class="skill-tab" role="tab" id="tab-frontend" aria-selected="false" aria-controls="panel-frontend" tabindex="-1">Frontend</button>
-          <button class="skill-tab" role="tab" id="tab-backend" aria-selected="false" aria-controls="panel-backend" tabindex="-1">Backend</button>
-          <button class="skill-tab" role="tab" id="tab-database" aria-selected="false" aria-controls="panel-database" tabindex="-1">Database</button>
-          <button class="skill-tab" role="tab" id="tab-tools" aria-selected="false" aria-controls="panel-tools" tabindex="-1">Tools</button>
-        </div>
-
-                <div class="skills-tab-content">
-          <!-- Panel All -->
-          <div class="skills-panel active" id="panel-all" role="tabpanel" aria-labelledby="tab-all">
-            <div class="skills-grid">
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/html5.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">HTML5</span>
-                  </div>
-                  <span class="skill-tag">Frontend</span>
+              <!-- Node 4 -->
+              <li class="journey-node">
+                <span class="journey-marker" aria-hidden="true"></span>
+                <div class="journey-content">
+                  <span class="journey-year">2024</span>
+                  <h3 class="journey-role">Collaboration Projects</h3>
+                  <p class="journey-desc">Working together on school projects.</p>
                 </div>
-                <p class="skill-note">Semantik web, struktur dokumen W3C, dan aksesibilitas dasar.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/tailwindcss.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">CSS3 &amp; Tailwind</span>
-                  </div>
-                  <span class="skill-tag">Frontend</span>
-                </div>
-                <p class="skill-note">Responsive design, flexbox, CSS grid, dan arsitektur utility-first.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/javascript.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">JavaScript</span>
-                  </div>
-                  <span class="skill-tag">Frontend</span>
-                </div>
-                <p class="skill-note">ES6+, DOM manipulation, asynchronous fetch, dan event handling.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/react.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">React</span>
-                  </div>
-                  <span class="skill-tag">Frontend</span>
-                </div>
-                <p class="skill-note">Komponen modular, JSX, state management, dan hooks.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/php.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">PHP</span>
-                  </div>
-                  <span class="skill-tag">Backend</span>
-                </div>
-                <p class="skill-note">Pemrograman server-side, routing dasar, dan pemrosesan form.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/nodejs.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">Node.js &amp; Express</span>
-                  </div>
-                  <span class="skill-tag">Backend</span>
-                </div>
-                <p class="skill-note">RESTful routing, middleware, dan arsitektur backend asynchronous.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/restapi.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">REST API</span>
-                  </div>
-                  <span class="skill-tag">Backend</span>
-                </div>
-                <p class="skill-note">Perancangan endpoint CRUD, validasi payload, dan status code HTTP.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/mysql.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">MySQL</span>
-                  </div>
-                  <span class="skill-tag">Database</span>
-                </div>
-                <p class="skill-note">Perancangan skema relasional, query SQL (SELECT, INSERT, UPDATE, JOIN).</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/git.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">Git &amp; GitHub</span>
-                  </div>
-                  <span class="skill-tag">Tools</span>
-                </div>
-                <p class="skill-note">Version control, branching, repository management, dan kolaborasi tim.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/postman.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">Postman</span>
-                  </div>
-                  <span class="skill-tag">Tools</span>
-                </div>
-                <p class="skill-note">Pengujian request HTTP, inspeksi respons API, dan validasi data.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/vscode.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">VS Code</span>
-                  </div>
-                  <span class="skill-tag">Tools</span>
-                </div>
-                <p class="skill-note">Lingkungan kerja utama, ekstensi produktivitas, dan debugging lokal.</p>
-              </div>
-            </div>
+              </li>
+            </ol>
           </div>
 
-          <!-- Panel Frontend -->
-          <div class="skills-panel" id="panel-frontend" role="tabpanel" aria-labelledby="tab-frontend" hidden>
-            <div class="skills-grid">
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/html5.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">HTML5</span>
-                  </div>
-                  <span class="skill-tag">Frontend</span>
-                </div>
-                <p class="skill-note">Semantik web, struktur dokumen W3C, dan aksesibilitas dasar.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/tailwindcss.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">CSS3 &amp; Tailwind</span>
-                  </div>
-                  <span class="skill-tag">Frontend</span>
-                </div>
-                <p class="skill-note">Responsive design, flexbox, CSS grid, dan arsitektur utility-first.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/javascript.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">JavaScript</span>
-                  </div>
-                  <span class="skill-tag">Frontend</span>
-                </div>
-                <p class="skill-note">ES6+, DOM manipulation, asynchronous fetch, dan event handling.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/react.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">React</span>
-                  </div>
-                  <span class="skill-tag">Frontend</span>
-                </div>
-                <p class="skill-note">Komponen modular, JSX, state management, dan hooks.</p>
-              </div>
-            </div>
-          </div>
+          <!-- Right Column: Mountain Quote Card -->
+          <div class="journey-quote-col">
+            <div class="journey-quote-card" aria-label="Kutipan Inspiratif">
+              <!-- Mountain Silhouette Backdrop Graphic -->
+              <div class="quote-mountain-backdrop" aria-hidden="true">
+                <svg viewBox="0 0 540 360" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" class="mountain-svg">
+                  <defs>
+                    <linearGradient id="mt-sky-grad" x1="270" y1="0" x2="270" y2="360" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#080e1e"/>
+                      <stop offset="55%" stop-color="#0e172e"/>
+                      <stop offset="100%" stop-color="#14244d"/>
+                    </linearGradient>
+                    <linearGradient id="mt-back-grad" x1="270" y1="120" x2="270" y2="360" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#1e325c" stop-opacity="0.75"/>
+                      <stop offset="100%" stop-color="#070c18" stop-opacity="0.95"/>
+                    </linearGradient>
+                    <linearGradient id="mt-front-grad" x1="270" y1="190" x2="270" y2="360" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#14213d"/>
+                      <stop offset="100%" stop-color="#04060d"/>
+                    </linearGradient>
+                    <linearGradient id="mt-ridge-highlight" x1="320" y1="140" x2="540" y2="340" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+                      <stop offset="70%" stop-color="#1d4ed8" stop-opacity="0.1"/>
+                      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <!-- Sky Base -->
+                  <rect width="540" height="360" fill="url(#mt-sky-grad)"/>
+                  
+                  <!-- Stars in Sky -->
+                  <circle cx="120" cy="70" r="1.5" fill="#ffffff" opacity="0.6"/>
+                  <circle cx="280" cy="50" r="1" fill="#ffffff" opacity="0.4"/>
+                  <circle cx="420" cy="80" r="1.5" fill="#ffffff" opacity="0.5"/>
+                  <circle cx="340" cy="110" r="1" fill="#ffffff" opacity="0.3"/>
 
-          <!-- Panel Backend -->
-          <div class="skills-panel" id="panel-backend" role="tabpanel" aria-labelledby="tab-backend" hidden>
-            <div class="skills-grid">
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/php.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">PHP</span>
-                  </div>
-                  <span class="skill-tag">Backend</span>
-                </div>
-                <p class="skill-note">Pemrograman server-side, routing dasar, dan pemrosesan form.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/nodejs.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">Node.js &amp; Express</span>
-                  </div>
-                  <span class="skill-tag">Backend</span>
-                </div>
-                <p class="skill-note">RESTful routing, middleware, dan arsitektur backend asynchronous.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/restapi.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">REST API</span>
-                  </div>
-                  <span class="skill-tag">Backend</span>
-                </div>
-                <p class="skill-note">Perancangan endpoint CRUD, validasi payload, dan status code HTTP.</p>
-              </div>
-            </div>
-          </div>
+                  <!-- Distant Mountain Peaks -->
+                  <path d="M 0 250 L 110 170 L 190 220 L 290 140 L 390 210 L 480 150 L 540 180 L 540 360 L 0 360 Z" fill="url(#mt-back-grad)"/>
 
-          <!-- Panel Database -->
-          <div class="skills-panel" id="panel-database" role="tabpanel" aria-labelledby="tab-database" hidden>
-            <div class="skills-grid">
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/mysql.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">MySQL</span>
-                  </div>
-                  <span class="skill-tag">Database</span>
-                </div>
-                <p class="skill-note">Perancangan skema relasional, query SQL (SELECT, INSERT, UPDATE, JOIN).</p>
-              </div>
-            </div>
-          </div>
+                  <!-- Near Mountain Ridges with Textures -->
+                  <path d="M 0 290 L 80 230 L 160 270 L 250 190 L 370 290 L 460 210 L 540 260 L 540 360 L 0 360 Z" fill="url(#mt-front-grad)"/>
 
-          <!-- Panel Tools -->
-          <div class="skills-panel" id="panel-tools" role="tabpanel" aria-labelledby="tab-tools" hidden>
-            <div class="skills-grid">
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/git.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">Git &amp; GitHub</span>
-                  </div>
-                  <span class="skill-tag">Tools</span>
-                </div>
-                <p class="skill-note">Version control, branching, repository management, dan kolaborasi tim.</p>
+                  <!-- Blue Ridge Rim Light -->
+                  <path d="M 250 190 L 370 290 L 460 210 L 540 260" stroke="url(#mt-ridge-highlight)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
               </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/postman.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">Postman</span>
-                  </div>
-                  <span class="skill-tag">Tools</span>
-                </div>
-                <p class="skill-note">Pengujian request HTTP, inspeksi respons API, dan validasi data.</p>
-              </div>
-              <div class="skill-item">
-                <div class="skill-top">
-                  <div class="skill-title-group">
-                    <span class="skill-logo" aria-hidden="true">
-                      <img src="assets/icons/vscode.svg" alt="" width="26" height="26" class="skill-icon-img" loading="lazy">
-                    </span>
-                    <span class="skill-name">VS Code</span>
-                  </div>
-                  <span class="skill-tag">Tools</span>
-                </div>
-                <p class="skill-note">Lingkungan kerja utama, ekstensi produktivitas, dan debugging lokal.</p>
+
+              <!-- Quote Typography -->
+              <div class="journey-quote-body">
+                <blockquote class="journey-quote-text">
+                  &ldquo;Keep learning,<br>
+                  keep building,<br>
+                  <span class="quote-cyan-line">and keep growing.</span>&rdquo;
+                </blockquote>
               </div>
             </div>
           </div>
@@ -989,100 +794,99 @@
     </section>
 
     <!-- =========================================================================
-         8. CONTACT SECTION (HUBUNGI SAYA / KIRIM PESAN)
+         7. CONTACT SECTION
          ========================================================================= -->
     <section class="section contact-section" id="contact" aria-label="Kontak">
-      <div class="container">
-        <div class="contact-dual-layout">
-          <!-- Left Column: Direct Info -->
-          <div class="contact-info-col">
-            <div class="section-eyebrow">GET IN TOUCH -</div>
-            <h2 class="contact-heading">Let's <span class="text-accent">Connect</span></h2>
-            <p class="contact-desc">
-              Jika ada pertanyaan, peluang kolaborasi, atau sekadar ingin berdiskusi tentang teknologi, jangan ragu untuk menghubungi saya.
+      <!-- Decorative Electric Blue Ambient Wave in Bottom Right -->
+      <div class="contact-backdrop" aria-hidden="true">
+        <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="contact-wave-svg" preserveAspectRatio="none">
+          <path d="M 120 400 C 260 360, 420 280, 600 160 L 600 400 Z" fill="url(#contact-wave-grad)" opacity="0.35"/>
+          <path d="M 120 400 C 260 360, 420 280, 600 160" stroke="#38bdf8" stroke-width="2" opacity="0.5"/>
+          <defs>
+            <linearGradient id="contact-wave-grad" x1="300" y1="200" x2="600" y2="400" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4"/>
+              <stop offset="60%" stop-color="#1d4ed8" stop-opacity="0.15"/>
+              <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="container contact-container">
+        <div class="contact-showcase-layout">
+          <!-- Left Column: Heading & CTA -->
+          <div class="contact-narrative-col">
+            <div class="section-eyebrow">Contact -</div>
+            <h2 class="contact-hero-heading">Have a project in mind?<br>Let's connect.</h2>
+            <p class="contact-hero-desc">
+              I'm open for collaboration, freelance work, and interesting opportunities.
             </p>
-
-            <ul class="contact-direct-list">
-              <li class="direct-item">
-                <span class="direct-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                </span>
-                <a href="mailto:supranatantra10@gmail.com" class="direct-link">supranatantra10@gmail.com</a>
-              </li>
-              <li class="direct-item">
-                <span class="direct-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                </span>
-                <span class="direct-text">Bogor, Jawa Barat</span>
-              </li>
-            </ul>
-
-            <!-- Social Links Row -->
-            <div class="social-row">
-              <a href="https://github.com/Aldentra-S" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Profil GitHub Aldentra">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            <div class="contact-action">
+              <a href="https://wa.me/6285210157886" target="_blank" rel="noopener noreferrer" class="btn btn-hero-primary">
+                <span>Get In Touch</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-                <span>GitHub</span>
-              </a>
-              <a href="https://www.linkedin.com/in/aldentra-supranatantra-3467963a5" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Profil LinkedIn Aldentra">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.27a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6z"/>
-                </svg>
-                <span>LinkedIn</span>
-              </a>
-              <a href="https://instagram.com/aldentra" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Profil Instagram Aldentra">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                <span>Instagram</span>
               </a>
             </div>
           </div>
 
-          <!-- Right Column: Message Form (WhatsApp Integration) -->
-          <div class="contact-form-card">
-            <h3 class="form-title">Kirim Pesan</h3>
-            <p class="form-subtitle">Saya akan segera merespons pesan Anda melalui WhatsApp.</p>
+          <!-- Vertical Divider -->
+          <div class="contact-divider" aria-hidden="true"></div>
 
-            <form id="contact-form" novalidate>
-              <div class="form-row-3">
-                <div class="form-field">
-                  <label for="name" class="label">Nama Lengkap *</label>
-                  <input type="text" id="name" class="input" placeholder="Masukkan nama lengkap" required aria-required="true" aria-describedby="name-error">
-                  <span id="name-error" class="error-text" aria-live="polite"></span>
-                </div>
+          <!-- Right Column: Direct Channels -->
+          <div class="contact-channels-col">
+            <ul class="contact-channels-list" aria-label="Daftar Kontak Langsung">
+              <!-- Channel 1: Email -->
+              <li class="contact-channel-item">
+                <a href="mailto:supranatantra10@gmail.com" class="channel-link">
+                  <span class="channel-icon-pill" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </span>
+                  <span class="channel-label">supranatantra10@gmail.com</span>
+                </a>
+              </li>
 
-                <div class="form-field">
-                  <label for="email" class="label">Email *</label>
-                  <input type="email" id="email" class="input" placeholder="nama@contoh.com" required aria-required="true" aria-describedby="email-error">
-                  <span id="email-error" class="error-text" aria-live="polite"></span>
-                </div>
+              <!-- Channel 2: GitHub -->
+              <li class="contact-channel-item">
+                <a href="https://github.com/Aldentra-S" target="_blank" rel="noopener noreferrer" class="channel-link">
+                  <span class="channel-icon-pill" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                    </svg>
+                  </span>
+                  <span class="channel-label">github.com/Aldentra-S</span>
+                </a>
+              </li>
 
-                <div class="form-field">
-                  <label for="subject" class="label">Subjek *</label>
-                  <input type="text" id="subject" class="input" placeholder="Pilih atau tulis subjek pesan" required aria-required="true" aria-describedby="subject-error">
-                  <span id="subject-error" class="error-text" aria-live="polite"></span>
-                </div>
-              </div>
+              <!-- Channel 3: LinkedIn -->
+              <li class="contact-channel-item">
+                <a href="https://www.linkedin.com/in/aldentra-supranatantra-3467963a5" target="_blank" rel="noopener noreferrer" class="channel-link">
+                  <span class="channel-icon-pill" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.27a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6z"/>
+                    </svg>
+                  </span>
+                  <span class="channel-label">linkedin.com/in/aldentra</span>
+                </a>
+              </li>
 
-              <div class="form-field">
-                <label for="message" class="label">Pesan *</label>
-                <textarea id="message" class="input textarea" rows="4" placeholder="Tulis pesan Anda di sini..." required aria-required="true" aria-describedby="message-error"></textarea>
-                <span id="message-error" class="error-text" aria-live="polite"></span>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                Kirim via WhatsApp
-              </button>
-
-              <div id="form-success" class="form-notice" role="status" aria-live="polite" hidden>
-                Formulir valid. Mengalihkan ke WhatsApp...
-              </div>
-            </form>
+              <!-- Channel 4: WhatsApp -->
+              <li class="contact-channel-item">
+                <a href="https://wa.me/6285210157886" target="_blank" rel="noopener noreferrer" class="channel-link">
+                  <span class="channel-icon-pill" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                    </svg>
+                  </span>
+                  <span class="channel-label">+62 852 1015 7886</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -1090,7 +894,7 @@
   </main>
 
   <!-- =========================================================================
-       9. FOOTER
+       8. FOOTER
        ========================================================================= -->
   <footer class="footer">
     <div class="container footer-container">
@@ -1099,13 +903,12 @@
         <span class="footer-name">Aldentra Supranatantra</span>
       </div>
 
-      <div class="footer-meta">
-        <p class="copyright">&copy; <span id="current-year">2026</span> Aldentra Supranatantra. Seluruh hak cipta dilindungi.</p>
-        <button id="back-to-top" class="back-to-top-btn" aria-label="Kembali ke atas">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="18 15 12 9 6 15"></polyline>
-          </svg>
-        </button>
+      <div class="footer-tagline">
+        Build. Develop. Innovate.
+      </div>
+
+      <div class="footer-copyright">
+        &copy; <span id="current-year">2026</span> All rights reserved.
       </div>
     </div>
   </footer>
