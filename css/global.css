@@ -508,22 +508,21 @@ ul, ol {
    -------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
-  padding-top: 60px;
-  padding-bottom: 90px;
-  background-color: var(--bg-primary);
+  padding-top: 70px;
+  padding-bottom: 100px;
+  background-color: #030712;
   overflow: hidden;
 }
 
-.hero-ambient-glow {
+.hero-section::after {
+  content: '';
   position: absolute;
-  top: -10%;
-  right: -5%;
-  width: 700px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.16) 0%, rgba(37, 99, 235, 0.05) 50%, transparent 75%);
-  filter: blur(60px);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.2) 25%, rgba(56, 189, 248, 0.35) 60%, transparent 100%);
   pointer-events: none;
-  z-index: 0;
 }
 
 .hero-container {
@@ -700,10 +699,10 @@ ul, ol {
 /* Signature Cosmic Arcs */
 .signature-arcs-svg {
   position: absolute;
-  top: -15%;
-  right: -15%;
-  width: 130%;
-  height: 130%;
+  top: -18%;
+  right: -18%;
+  width: 140%;
+  height: 140%;
   pointer-events: none;
   z-index: 1;
   animation: arc-pulse 8s infinite alternate ease-in-out;
@@ -722,15 +721,6 @@ ul, ol {
   background: radial-gradient(circle at 35% 30%, rgba(59, 130, 246, 0.22) 0%, rgba(12, 18, 34, 0.9) 70%);
   border: 1px solid rgba(59, 130, 246, 0.45);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65), 0 2px 8px rgba(0, 0, 0, 0.4);
-  transition: transform var(--duration-normal) var(--ease-standard),
-              box-shadow var(--duration-normal) var(--ease-standard),
-              border-color var(--duration-normal) var(--ease-standard);
-}
-
-.profile-frame:hover {
-  transform: translateY(-4px);
-  border-color: rgba(59, 130, 246, 0.85);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.75), 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .profile-frame-inner {
@@ -775,28 +765,6 @@ ul, ol {
   letter-spacing: -0.04em;
   color: #3b82f6;
   user-select: none;
-}
-
-/* Microcopy along arc */
-.hero-microcopy {
-  position: absolute;
-  right: -10px;
-  top: 42%;
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: var(--text-secondary);
-}
-
-.microcopy-dash {
-  width: 20px;
-  height: 1.5px;
-  background-color: #3b82f6;
-  opacity: 0.8;
 }
 
 /* Keyframe Animations */
@@ -1605,10 +1573,6 @@ ul, ol {
     min-height: 400px;
     max-width: 500px;
     margin: 0 auto;
-  }
-
-  .hero-microcopy {
-    display: none;
   }
 
   .about-editorial-grid {
