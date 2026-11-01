@@ -30,7 +30,6 @@
     <div class="nav-container">
       <a href="#home" class="brand" aria-label="Aldentra Supranatantra - Kembali ke beranda">
         <span class="brand-monogram">AL</span>
-        <span class="brand-name">Aldentra</span>
       </a>
 
       <!-- Desktop Navigation Links -->
@@ -46,8 +45,8 @@
 
       <!-- Desktop CTA -->
       <div class="nav-actions">
-        <a href="#contact" class="btn btn-primary btn-sm">
-          Hubungi Saya
+        <a href="#contact" class="btn btn-nav-connect">
+          <span>Let's Connect</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <line x1="7" y1="17" x2="17" y2="7"></line>
             <polyline points="7 7 17 7 17 17"></polyline>
@@ -74,7 +73,10 @@
           <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
         </ul>
         <div class="mobile-cta-wrapper">
-          <a href="#contact" class="btn btn-primary btn-block">Hubungi Saya</a>
+          <a href="#contact" class="btn btn-hero-primary btn-block">
+            <span>Let's Connect</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
         </div>
       </nav>
     </div>
@@ -82,189 +84,150 @@
 
   <main id="main-content">
     <!-- =========================================================================
-         2. HERO SECTION
+         2. HERO SECTION (DARK EDITORIAL DEVELOPER PORTFOLIO)
          ========================================================================= -->
     <section class="hero-section" id="home" aria-label="Beranda">
+      <!-- Ambient Lighting and Signature Cosmic Arcs -->
+      <div class="hero-ambient-glow" aria-hidden="true"></div>
+      
       <div class="container hero-container">
-        <!-- Left Column: Editorial Introduction -->
+        <!-- Left Column: Personal Identity & Editorial Intro -->
         <div class="hero-content">
-          <div class="hero-eyebrow">Halo, saya</div>
+          <!-- Bold Display Headline -->
           <h1 class="hero-title">
-            Aldentra<br>
-            <span>Supranatantra</span>
+            <span class="title-first">Aldentra</span>
+            <span class="title-last">Supranatantra</span>
           </h1>
-          <p class="hero-role">Siswa SMK PPLG &middot; Web Developer</p>
+
+          <!-- Role as Clean Plain Text -->
+          <p class="hero-role">Software Developer</p>
+
+          <!-- Tagline -->
+          <p class="hero-tagline">Build. Develop. Innovate.</p>
+
+          <!-- Description -->
           <p class="hero-description">
-            Saya adalah siswa SMK Negeri 1 Ciomas jurusan Pengembangan Perangkat Lunak dan Gim (PPLG). Fokus saya pada pengembangan aplikasi web yang fungsional, responsif, dan mudah digunakan.
+            A passionate Software Developer focused on creating innovative and efficient web applications.
           </p>
 
+          <!-- Hero Action Buttons -->
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">
-              Lihat Proyek
+            <a href="#projects" class="btn btn-hero-primary">
+              <span>Explore My Work</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
-            <a href="#contact" class="btn btn-secondary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
+            <a href="#about" class="btn btn-hero-secondary">
+              <span>About Me</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
               </svg>
-              Hubungi Saya
             </a>
           </div>
 
-          <!-- Factual Learning Stats -->
-          <div class="hero-stats" role="region" aria-label="Statistik Pembelajaran">
-            <div class="stat-item">
-              <span class="stat-number">6+</span>
-              <span class="stat-label">Proyek Selesai</span>
+          <!-- Floating Tech Stack Pill Capsule -->
+          <div class="hero-tech-capsule" role="region" aria-label="Teknologi Utama">
+            <div class="capsule-icons">
+              <span class="capsule-icon-item" title="HTML5">
+                <img src="assets/icons/html5.svg" alt="HTML5" width="22" height="22" loading="eager">
+              </span>
+              <span class="capsule-icon-item" title="CSS3">
+                <img src="assets/icons/css3.svg" alt="CSS3" width="22" height="22" loading="eager">
+              </span>
+              <span class="capsule-icon-item" title="Tailwind CSS">
+                <img src="assets/icons/tailwindcss.svg" alt="Tailwind CSS" width="22" height="22" loading="eager">
+              </span>
+              <span class="capsule-icon-item" title="React">
+                <img src="assets/icons/react.svg" alt="React" width="22" height="22" loading="eager">
+              </span>
+              <span class="capsule-icon-item" title="PHP">
+                <img src="assets/icons/php.svg" alt="PHP" width="22" height="22" loading="eager">
+              </span>
+              <span class="capsule-icon-item" title="Node.js">
+                <img src="assets/icons/nodejs.svg" alt="Node.js" width="22" height="22" loading="eager">
+              </span>
+              <span class="capsule-icon-item" title="Git">
+                <img src="assets/icons/git.svg" alt="Git" width="22" height="22" loading="eager">
+              </span>
+              <span class="capsule-icon-item" title="VS Code">
+                <img src="assets/icons/vscode.svg" alt="VS Code" width="22" height="22" loading="eager">
+              </span>
             </div>
-            <div class="stat-divider" aria-hidden="true"></div>
-            <div class="stat-item">
-              <span class="stat-number">7+</span>
-              <span class="stat-label">Teknologi Utama</span>
-            </div>
-            <div class="stat-divider" aria-hidden="true"></div>
-            <div class="stat-item">
-              <span class="stat-number">2 Tahun</span>
-              <span class="stat-label">Pengalaman Belajar</span>
-            </div>
+            <a href="#skills" class="capsule-more" aria-label="Lihat seluruh keahlian">+ More</a>
+          </div>
+
+          <!-- Scroll to Explore Indicator -->
+          <div class="hero-scroll-wrapper">
+            <a href="#about" class="hero-scroll-indicator" aria-label="Gulir ke bagian Tentang Saya">
+              <span class="mouse-icon" aria-hidden="true">
+                <span class="mouse-wheel"></span>
+              </span>
+              <span class="scroll-text">Scroll to explore</span>
+            </a>
           </div>
         </div>
 
-        <!-- Right Column: Dual-Device Realistic Preview Frame -->
+        <!-- Right Column: Profile Frame & Signature Curved Lines -->
         <div class="hero-visual">
-          <div class="device-composition" aria-label="Mockup pratinjau antarmuka aplikasi Smart Finance">
-            <!-- Laptop Chassis Mockup -->
-            <div class="laptop-mockup">
-              <div class="laptop-screen">
-                <div class="mockup-header-bar">
-                  <div class="window-dots" aria-hidden="true">
-                    <span></span><span></span><span></span>
-                  </div>
-                  <div class="mockup-header-title">Smart Finance &middot; Dashboard</div>
-                </div>
-                <div class="laptop-display-content">
-                  <img
-                    src="assets/images/gambarproject1.png"
-                    alt="Tangkapan layar antarmuka aplikasi Smart Finance menampilkan grafik saldo dan transaksi"
-                    class="laptop-img"
-                    width="600"
-                    height="380"
-                    loading="eager"
-                  >
-                </div>
-              </div>
-              <div class="laptop-base" aria-hidden="true">
-                <div class="laptop-notch"></div>
-              </div>
-            </div>
+          <div class="hero-visual-stage" aria-label="Area foto profil dan signature visual">
+            <!-- Signature Electric-Blue Curved Lines SVG -->
+            <svg class="signature-arcs-svg" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="arc-grad-primary" x1="150" y1="50" x2="650" y2="550" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+                  <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.1"/>
+                </linearGradient>
+                <linearGradient id="arc-grad-secondary" x1="250" y1="120" x2="680" y2="600" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.7"/>
+                  <stop offset="60%" stop-color="#2563eb" stop-opacity="0.4"/>
+                  <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <!-- Outer Major Arc -->
+              <path d="M 220 30 C 460 70, 680 230, 680 470 C 680 550, 640 620, 580 670" stroke="url(#arc-grad-primary)" stroke-width="2" stroke-linecap="round"/>
+              <!-- Inner Secondary Arc -->
+              <path d="M 330 90 C 500 170, 610 310, 610 490" stroke="url(#arc-grad-secondary)" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.6"/>
+            </svg>
 
-            <!-- Standing Mobile Phone Mockup -->
-            <div class="phone-mockup" aria-hidden="true">
-              <div class="phone-screen">
-                <div class="phone-notch"></div>
+            <!-- Circular Profile Photo Frame Container -->
+            <!-- LOKASI FOTO PROFIL: Ganti src di bawah dengan path file foto Anda (misal: src="assets/images/profile.jpg") -->
+            <div class="profile-frame" aria-label="Bingkai foto profil Aldentra Supranatantra">
+              <div class="profile-frame-inner">
                 <img
-                  src="assets/images/smartfinance-mobile.png"
-                  alt="Tangkapan layar antarmuka mobile aplikasi Smart Finance"
-                  class="phone-img"
-                  width="140"
-                  height="280"
+                  src="assets/images/profile-placeholder.svg"
+                  alt="Foto profil Aldentra Supranatantra"
+                  class="profile-image"
+                  width="360"
+                  height="360"
                   loading="eager"
                 >
               </div>
             </div>
-          </div>
-          <div class="mockup-caption">Smart Finance &middot; Web Application</div>
-        </div>
-      </div>
-    </section>
 
-    <!-- =========================================================================
-         3. TECHNOLOGY STACK RIBBON
-         ========================================================================= -->
-    <section class="section tech-stack-section" aria-label="Teknologi yang Digunakan">
-      <div class="container">
-        <div class="tech-header">
-          <h2 class="tech-title">TECHNOLOGY STACK</h2>
-          <p class="tech-subtitle">Teknologi yang saya gunakan dalam mengembangkan berbagai proyek.</p>
-        </div>
-
-        <div class="tech-grid">
-          <!-- 1. HTML5 -->
-          <div class="tech-card">
-            <div class="tech-icon-wrap" aria-hidden="true">
-              <img src="assets/icons/html5.svg" alt="" width="28" height="28" class="tech-icon-img" loading="lazy">
+            <!-- Signature Right Margin Microcopy -->
+            <div class="hero-microcopy" aria-hidden="true">
+              <span>TURN IDEAS INTO REALITY</span>
+              <span class="microcopy-dash"></span>
             </div>
-            <span class="tech-label">HTML5</span>
-          </div>
-
-          <!-- 2. CSS3 -->
-          <div class="tech-card">
-            <div class="tech-icon-wrap" aria-hidden="true">
-              <img src="assets/icons/css3.svg" alt="" width="28" height="28" class="tech-icon-img" loading="lazy">
-            </div>
-            <span class="tech-label">CSS3</span>
-          </div>
-
-          <!-- 3. JavaScript -->
-          <div class="tech-card">
-            <div class="tech-icon-wrap" aria-hidden="true">
-              <img src="assets/icons/javascript.svg" alt="" width="28" height="28" class="tech-icon-img" loading="lazy">
-            </div>
-            <span class="tech-label">JavaScript</span>
-          </div>
-
-          <!-- 4. PHP -->
-          <div class="tech-card">
-            <div class="tech-icon-wrap" aria-hidden="true">
-              <img src="assets/icons/php.svg" alt="" width="28" height="28" class="tech-icon-img" loading="lazy">
-            </div>
-            <span class="tech-label">PHP</span>
-          </div>
-
-          <!-- 5. React -->
-          <div class="tech-card">
-            <div class="tech-icon-wrap" aria-hidden="true">
-              <img src="assets/icons/react.svg" alt="" width="28" height="28" class="tech-icon-img" loading="lazy">
-            </div>
-            <span class="tech-label">React</span>
-          </div>
-
-          <!-- 6. Node.js -->
-          <div class="tech-card">
-            <div class="tech-icon-wrap" aria-hidden="true">
-              <img src="assets/icons/nodejs.svg" alt="" width="28" height="28" class="tech-icon-img" loading="lazy">
-            </div>
-            <span class="tech-label">Node.js</span>
-          </div>
-
-          <!-- 7. MySQL -->
-          <div class="tech-card">
-            <div class="tech-icon-wrap" aria-hidden="true">
-              <img src="assets/icons/mysql.svg" alt="" width="28" height="28" class="tech-icon-img" loading="lazy">
-            </div>
-            <span class="tech-label">MySQL</span>
-          </div>
-
-          <!-- 8. Git -->
-          <div class="tech-card">
-            <div class="tech-icon-wrap" aria-hidden="true">
-              <img src="assets/icons/git.svg" alt="" width="28" height="28" class="tech-icon-img" loading="lazy">
-            </div>
-            <span class="tech-label">Git</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =========================================================================
-         4. ABOUT ME & LEARNING JOURNEY
+         3. ABOUT ME & LEARNING JOURNEY
          ========================================================================= -->
     <section class="section about-section" id="about" aria-label="Tentang Saya dan Perjalanan Belajar">
       <div class="container">
+        <div class="section-header-editorial">
+          <div class="section-eyebrow">ABOUT ME -</div>
+          <h2 class="section-title">Background &amp; <span class="text-accent">Journey</span></h2>
+          <p class="section-subtitle">Mengenal lebih dekat perjalanan belajar, pendidikan, dan prinsip rekayasa perangkat lunak saya.</p>
+        </div>
         <div class="about-editorial-grid">
           <!-- Column 1: Tentang Saya -->
           <div class="editorial-col">
@@ -391,12 +354,13 @@
     <section class="section projects-section" id="projects" aria-label="Proyek Unggulan">
       <div class="container">
         <div class="section-header-row">
-          <div>
-            <h2 class="section-title">Proyek Unggulan</h2>
+          <div class="section-header-editorial">
+            <div class="section-eyebrow">MY PROJECTS -</div>
+            <h2 class="section-title">Featured <span class="text-accent">Projects</span></h2>
             <p class="section-subtitle">Tiga proyek utama yang paling menunjukkan kemampuan dan fokus pengembangan saya.</p>
           </div>
           <a href="#other-projects" class="section-link">
-            Lihat Semua Proyek
+            <span>Lihat Semua Proyek</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
@@ -519,8 +483,9 @@
          ========================================================================= -->
     <section class="section other-projects-section" id="other-projects" aria-label="Proyek Lainnya">
       <div class="container">
-        <div class="section-header-compact">
-          <h2 class="section-title">Proyek Lainnya</h2>
+        <div class="section-header-editorial">
+          <div class="section-eyebrow">EXPLORE MORE -</div>
+          <h2 class="section-title">Other <span class="text-accent">Projects</span></h2>
           <p class="section-subtitle">Proyek tambahan yang juga menunjukkan kemampuan dan eksplorasi saya.</p>
         </div>
 
@@ -538,13 +503,18 @@
             </div>
             <div class="compact-body">
               <h3 class="compact-title">Aplikasi Catatan Pribadi</h3>
-              <p class="compact-desc">Aplikasi web untuk mencatat aktivitas harian dengan penyimpanan lokal.</p>
+              <p class="compact-desc">Aplikasi web untuk mencatat aktivitas harian dengan antarmuka modular.</p>
               <div class="compact-tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
+                <span class="tag">React</span>
                 <span class="tag">JavaScript</span>
+                <span class="tag">Vite</span>
+                <span class="tag">CSS</span>
               </div>
               <div class="compact-footer">
+                <a href="https://my-personal-notes-gamma.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-action link-primary">
+                  Demo
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
                 <a href="https://github.com/Aldentra-S/my-personal-notes.git" target="_blank" rel="noopener noreferrer" class="link-action">
                   GitHub
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
@@ -571,10 +541,14 @@
               </div>
               <div class="compact-tags">
                 <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
+                <span class="tag">Tailwind CSS</span>
                 <span class="tag">JavaScript</span>
               </div>
               <div class="compact-footer">
+                <a href="https://aplikasi-pendaftaran-eskul.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-action link-primary">
+                  Demo
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
                 <a href="https://github.com/habibtegar/Aplikasi_Pendaftaran_Eskul.git" target="_blank" rel="noopener noreferrer" class="link-action">
                   GitHub
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
@@ -598,8 +572,13 @@
                 <span class="tag">HTML5</span>
                 <span class="tag">CSS3</span>
                 <span class="tag">JavaScript</span>
+                <span class="tag">LocalStorage</span>
               </div>
               <div class="compact-footer">
+                <a href="https://bookshelf-app-amber.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-action link-primary">
+                  Demo
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
                 <a href="https://github.com/Aldentra-S/bookshelf-app.git" target="_blank" rel="noopener noreferrer" class="link-action">
                   GitHub
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
@@ -616,8 +595,9 @@
          ========================================================================= -->
     <section class="section skills-section" id="skills" aria-label="Keahlian dan Teknologi">
       <div class="container">
-        <div class="section-header-compact">
-          <h2 class="section-title">Keahlian &amp; Teknologi</h2>
+        <div class="section-header-editorial">
+          <div class="section-eyebrow">CAPABILITIES -</div>
+          <h2 class="section-title">Skills &amp; <span class="text-accent">Technologies</span></h2>
           <p class="section-subtitle">Tingkat pemahaman teknologi yang dipelajari dan diterapkan secara faktual pada proyek.</p>
         </div>
 
@@ -936,7 +916,8 @@
         <div class="contact-dual-layout">
           <!-- Left Column: Direct Info -->
           <div class="contact-info-col">
-            <h2 class="contact-heading">Hubungi Saya</h2>
+            <div class="section-eyebrow">GET IN TOUCH -</div>
+            <h2 class="contact-heading">Let's <span class="text-accent">Connect</span></h2>
             <p class="contact-desc">
               Jika ada pertanyaan, peluang kolaborasi, atau sekadar ingin berdiskusi tentang teknologi, jangan ragu untuk menghubungi saya.
             </p>

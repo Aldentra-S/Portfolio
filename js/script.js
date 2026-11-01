@@ -300,4 +300,43 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 700);
     });
   }
+
+  // 7. NAVBAR SCROLL EFFECT
+  const navbar = document.getElementById('navbar');
+  if (navbar) {
+    const handleNavScroll = () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleNavScroll, { passive: true });
+    handleNavScroll();
+  }
+
+  // 8. SCROLL REVEAL (SUBTLE MOTION RESPECTING REDUCED MOTION)
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    const revealTargets = document.querySelectorAll('.featured-card, .compact-card, .skill-item, .editorial-col');
+    
+    revealTargets.forEach(el => {
+      el.classList.add('reveal-item');
+    });
+
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealTargets.forEach(el => revealObserver.observe(el));
+  }
 });
